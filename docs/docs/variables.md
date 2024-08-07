@@ -32,6 +32,26 @@ x = 1
 </TabItem>
 </Tabs>
 
+Mutable variables can be declared without assigning a value to them.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+let x: int # no value assigned
+x = 1
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = 1
+```
+
+</TabItem>
+</Tabs>
+
 ## Const
 
 __Immutable__ variables are declared with the `const` keyword.
