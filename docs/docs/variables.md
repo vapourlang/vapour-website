@@ -56,8 +56,12 @@ x = 1
 
 __Immutable__ variables are declared with the `const` keyword.
 
+:::info
+
 Note that there are no constants in R (perhaps with `lockBinding`),
 this is only checked in Vapour.
+
+:::
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
