@@ -74,6 +74,32 @@ add = function(x) {
 </TabItem>
 </Tabs>
 
+## Anonymous Functions
+
+Anonymous functions are declared as shown below, inspired from Javascript,
+unlike Javascript Vapour expects curly braces (`{}`).
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+lapply(1..10, (x: int): int => {
+  return x + 1
+})
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+lapply(1:10, function(x) {
+  return(x + 1)
+})
+```
+
+</TabItem>
+</Tabs>
+
 ## Methods
 
 <Tabs>

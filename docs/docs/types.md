@@ -163,6 +163,77 @@ john = list(
 </TabItem>
 </Tabs>
 
+#### Dataframes
+
+The `dataframe` type creates a `data.frame`, it expects named, typed,
+vectors.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+type dataset: dataframe {
+  id: num,
+  name: char
+}
+
+let x = dataset(
+  id = 1..10,
+  name: "John"
+)
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = data.frame(
+  id = 1:10,
+  name = "John"
+)
+```
+
+</TabItem>
+</Tabs>
+
+#### Object
+
+The `object` is essentially a named list.
+
+:::info
+
+All attributes must be named in an `object`.
+
+:::
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+type thing: object {
+  id: num,
+  name: char
+}
+
+let x = thing(
+  id = 1..10,
+  name: "John"
+)
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = list(
+  id = 1:10,
+  name = "John"
+)
+```
+
+</TabItem>
+</Tabs>
+
 #### Structs
 
 A `struct` creates an R `structure`, the name of the struct is used as `class`.
