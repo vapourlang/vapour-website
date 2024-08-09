@@ -1,6 +1,5 @@
 ---
-sidebar_position: 2
-Title: Types
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';

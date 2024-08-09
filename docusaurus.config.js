@@ -23,7 +23,7 @@ const config = {
   organizationName: 'vapourlang', // Usually your GitHub org/user name.
   projectName: 'vapour', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -41,13 +41,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/vapourlang/vapour/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -72,13 +65,14 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+          {to: '/install', label: 'Install', position: 'left'},
+          {to: '/cli', label: 'CLI', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'sidebar',
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/vapourlang/vapour',
             label: 'GitHub',
@@ -94,7 +88,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs',
               },
             ],
           },
@@ -115,10 +109,6 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
                 href: 'https://github.com/vapourlang/vapour',
               },
@@ -128,10 +118,12 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Vapour.`,
       },
       prism: {
+        additionalLanguages: ['r'],
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
+  plugins: [require.resolve('docusaurus-lunr-search')],
 };
 
 export default config;

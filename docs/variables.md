@@ -1,12 +1,11 @@
 ---
-sidebar_position: 1
-title: Variables
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Variables
+# Variables
 
 In vapour you need to declare your variables before you can use them
 There are two ways to declare variables.

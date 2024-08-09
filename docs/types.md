@@ -1,6 +1,5 @@
 ---
-sidebar_position: 2
-Title: Types
+sidebar_position: 1
 ---
 
 import Tabs from '@theme/Tabs';
@@ -25,6 +24,7 @@ Complex:
 - `matrix` - matrix
 - `list` - list
 - `struct` - structure
+- `object` - named list 
 
 ## Usage 
 
