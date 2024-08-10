@@ -62,11 +62,12 @@ const config = {
         title: 'Vapour',
         logo: {
           alt: 'Vapour Logo',
-          src: 'img/logo.svg',
+          src: 'img/vapour-sm.png',
         },
         items: [
           {to: '/install', label: 'Install', position: 'left'},
           {to: '/cli', label: 'CLI', position: 'left'},
+          {to: '/lsp', label: 'LSP', position: 'left'},
           {
             type: 'docSidebar',
             sidebarId: 'sidebar',
