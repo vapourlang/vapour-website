@@ -19,7 +19,7 @@ function HomepageHeader() {
             to="/install">
             Install the language
           </Link>
-        </div> style={{marginTop: "5rem"}}
+        </div>
       </div>
     </header>
   );
