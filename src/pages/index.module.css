@@ -20,3 +20,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.white {
+  color: white;
+}
+
+.tagline {
+  margin-top: 3rem;
+}

@@ -4,50 +4,50 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Vapour',
-  tagline: 'Typed, imperative, superset of R',
-  favicon: 'img/favicon.ico',
+  title: "Vapour",
+  tagline: "Typed superset of R",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://vapour.dev',
+  url: "https://vapour.dev",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'vapourlang', // Usually your GitHub org/user name.
-  projectName: 'vapour', // Usually your repo name.
+  organizationName: "vapourlang", // Usually your GitHub org/user name.
+  projectName: "vapour", // Usually your repo name.
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/vapourlang/vapour/tree/main/packages/create-docusaurus/templates/shared/',
+            "https://github.com/vapourlang/vapour/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
     ],
@@ -57,61 +57,61 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'Vapour',
+        title: "Vapour",
         logo: {
-          alt: 'Vapour Logo',
-          src: 'img/vapour-sm.png',
+          alt: "Vapour Logo",
+          src: "img/vapour-sm.png",
         },
         items: [
-          {to: '/install', label: 'Install', position: 'left'},
-          {to: '/cli', label: 'CLI', position: 'left'},
-          {to: '/lsp', label: 'LSP', position: 'left'},
+          { to: "/install", label: "Install", position: "left" },
+          { to: "/cli", label: "CLI", position: "left" },
+          { to: "/lsp", label: "LSP", position: "left" },
           {
-            type: 'docSidebar',
-            sidebarId: 'sidebar',
-            position: 'left',
-            label: 'Docs',
+            type: "docSidebar",
+            sidebarId: "sidebar",
+            position: "left",
+            label: "Docs",
           },
           {
-            href: 'https://github.com/vapourlang/vapour',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/vapourlang/vapour",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'light',
+        style: "light",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs',
+                label: "Tutorial",
+                to: "/docs",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/vapour',
+                label: "Stack Overflow",
+                href: "https://stackoverflow.com/questions/tagged/vapour",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/devOpifex',
+                label: "Twitter",
+                href: "https://twitter.com/devOpifex",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/vapourlang/vapour',
+                label: "GitHub",
+                href: "https://github.com/vapourlang/vapour",
               },
             ],
           },
@@ -119,12 +119,12 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Vapour.`,
       },
       prism: {
-        additionalLanguages: ['r'],
+        additionalLanguages: ["r"],
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [require.resolve("docusaurus-lunr-search")],
 };
 
 export default config;
