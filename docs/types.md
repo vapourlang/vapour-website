@@ -63,17 +63,28 @@ Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
 
-## Multiple types 
+### Multiple  
 
-You can declare a variable with multiple types.
+An object can be one of multiple types, separate the types with `|`.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
 
 ```r
-let x: int | na = 1
+let x: int | na
 
-x = NA
-
-x = NULL
+x = na
 ```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = na
+```
+
+</TabItem>
+</Tabs>
 
 ## Custom types
 
@@ -98,29 +109,6 @@ let john: userId = 1
 
 ```r
 john = 1
-```
-
-</TabItem>
-</Tabs>
-
-### Multiple  
-
-An object can be one of multiple types, separate the types with `|`.
-
-<Tabs>
-<TabItem value="vp" label="Vapour">
-
-```r
-let x: int | na
-
-x = na
-```
-
-</TabItem>
-<TabItem value="r" label="R">
-
-```r
-x = na
 ```
 
 </TabItem>
