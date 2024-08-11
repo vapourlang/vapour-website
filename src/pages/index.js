@@ -16,8 +16,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--primary button--lg", styles.white)}
-            to="/install">
-            Install the language
+            to="/get-started">
+            Get Started
           </Link>
         </div>
       </div>
