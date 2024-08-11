@@ -55,7 +55,7 @@ The iterator needs to be declared
 <TabItem value="vp" label="Vapour">
 
 ```r
-for(let i: int = 1 in 1..10) {
+for(let i: int in 1..10) {
   print(i)
 }
 ```

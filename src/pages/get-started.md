@@ -28,7 +28,7 @@ way in which it differs [here](http://localhost:3000/docs/syntax).
 Vapour's extension is `.vp`, create your first script.
 
 ```r
-func hello(what: char): char {
+func hello(what: char = "Vapour"): char {
   return sprintf("Hello, %s", what)
 }
 

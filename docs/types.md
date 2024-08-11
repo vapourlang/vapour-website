@@ -26,6 +26,13 @@ Complex:
 - `struct` - structure
 - `object` - named list 
 
+:::info
+
+Infering types for base R and other packages is on the roadmap but likely
+will take quite some time to achieve.
+
+:::
+
 ## Usage 
 
 Types are __always preceded__ by a colon (`:`), e.g.: 
@@ -38,8 +45,8 @@ let x: int = 1
 
 :::warning
 
-Vapour currently does not have any knowledge of types of existing R
-packages.
+Use type `any` as little as possible as it defeats the purpose of 
+a typed language.
 
 :::
 
@@ -50,35 +57,25 @@ You can use any if you cannot know the actual type,
 let x: any = sum(1, 2, 3)
 ```
 
-You could still set a type of your choice of course,
-vapour will not perform a type check since it does not
-know the right type.
+:::warning
 
-```r
-let x: int = sum(1, 2, 3)
-
-let y: int = x
-```
-
-However, be careful that this may lead to issues as, in the example above,
-`sum` does not indeed always return a character string.
-
-```
-# returns NA
-sum(1, NA, 2)
-
-# improve type usage 
-let x: int | na = sum(1, 2, 3)
-```
-
-:::info
-
-Extracting types for base R and other packages is on the roadmap but likely
-will take quite some time to achieve.
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 
 :::
 
-## Custom Types
+## Multiple types 
+
+You can declare a variable with multiple types.
+
+```r
+let x: int | na = 1
+
+x = NA
+
+x = NULL
+```
+
+## Custom types
 
 You can declare your own custom types with the `type` keyword.
 
