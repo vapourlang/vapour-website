@@ -49,7 +49,7 @@ x = 1:10
 
 ## For loop
 
-The iterator needs to be declared
+The iterator needs to be declared with `let`.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
