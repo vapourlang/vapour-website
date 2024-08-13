@@ -26,8 +26,16 @@ Usage of vapour:
     	Directory where to place transpiled files from dir (default "R")
   -outfile infile
     	Name of R file to where to palce transpiled infile (default "vapour.R")
+  -port string
+    	Port on which to run the language server protocol (default "3000")
+  -repl
+    	Run the REPL
   -run-only
     	Run the transpiled vapour files
+  -tcp
+    	Run the language server protocol on TCP
+  -types string
+    	Path where to generate the type files, only applies if passing a directory with -indir (default "inst/types.vp")
   -version
     	Retrieve vapour version
 ```

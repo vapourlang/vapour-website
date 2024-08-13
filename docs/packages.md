@@ -16,7 +16,7 @@ usethis::create_package("vapour.pkg")
 
 ## 2. Setup vapour
 
-Simply create a new directory to host the Vapour code.
+First, create a new directory to host the Vapour code.
 
 <Tabs>
 <TabItem value="bash" label="bash">
@@ -30,6 +30,26 @@ mkdir vp
 
 ```r
 dir.create("vp")
+```
+
+</TabItem>
+</Tabs>
+
+Second, create the `inst` directory, this is where Vapour will
+output a file containing your custom types.
+
+<Tabs>
+<TabItem value="bash" label="bash">
+
+```bash
+mkdir inst
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+dir.create("inst")
 ```
 
 </TabItem>
