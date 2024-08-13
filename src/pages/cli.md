@@ -23,11 +23,11 @@ Usage of vapour:
   -lsp
     	Run the language server protocol
   -outdir dir
-    	Directory where to place transpiled files from dir (default "R")
+    	Directory where to place transpiled files from dir (defaults to R) (default "R")
   -outfile infile
-    	Name of R file to where to palce transpiled infile (default "vapour.R")
+    	Name of R file to where to palce transpiled infile. (defaults to vapour.R) (default "vapour.R")
   -port string
-    	Port on which to run the language server protocol (default "3000")
+    	Port on which to run the language server protocol, only used if -tcp flag is passed (defaults to 3000) (default "3000")
   -repl
     	Run the REPL
   -run-only
