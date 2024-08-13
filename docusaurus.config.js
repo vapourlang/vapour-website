@@ -68,6 +68,7 @@ const config = {
           { to: "/install", label: "Install", position: "left" },
           { to: "/cli", label: "CLI", position: "left" },
           { to: "/lsp", label: "LSP", position: "left" },
+          { to: "/repl", label: "REPL", position: "left" },
           {
             type: "docSidebar",
             sidebarId: "sidebar",
