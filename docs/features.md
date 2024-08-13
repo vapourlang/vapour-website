@@ -52,6 +52,18 @@ Vapour will check that you only reference variables that do exist.
 x$column
 ```
 
+## Function is exported
+
+Vapour will check that a function is indeed exported by a package
+if that function is called with its `::` namespace.
+
+```r
+dplyr::filter(cars, speed > 3)
+
+# will warn
+dplyr::wrong_fn()
+```
+
 ## Variables used
 
 Vapour will check that you used all the variables you declare.
@@ -62,7 +74,7 @@ let x: int = 1
 # will warn that y is never used
 let y: int = 1
 
-let total: int = x + y
+let total: int = x + 2
 ```
 
 ## Missing check
