@@ -43,6 +43,14 @@ const x: int = 1
 # will fail, it's a constant
 x = 2
 ```
+## Variables existence
+
+Vapour will check that you only reference variables that do exist.
+
+```r
+# will warn that x does not exist
+x$column
+```
 
 ## Variables used
 
