@@ -19,7 +19,7 @@ Simple:
 - `na` - any
 - `null` - null
 
-Complex:
+Objects:
 - `dataframe` - data.frame
 - `matrix` - matrix
 - `list` - list
@@ -40,6 +40,9 @@ Types are __always preceded__ by a colon (`:`), e.g.:
 ```r
 let x: int = 1
 ```
+
+Note that R has no scalar, therefore where you might expect `let x: int`
+to declare a scalar it actually declares a vector.
 
 ## Any
 
@@ -116,33 +119,26 @@ john = 1
 
 ### Complex
 
-You can define complex types such as `dataframe`, `list`, and `struct`.
+You can define complex types such as `dataframe`, `list`, `object`, and `struct`.
 
-#### List
+#### List 
+
+An object is a named list.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
 ```r
-type person list {
-  name: char,
-  age: int
-}
+type lst: list {int | na}
 
-let john: person = person(
-  name = "John",
-  age = 36
-)
+let counts: lst = lst(1, 2, 3, 4)
 ```
 
 </TabItem>
 <TabItem value="r" label="R">
 
 ```r
-john = list(
-  name = "John",
-  age = 36
-)
+counts = lst(1, 2, 3, 4)
 ```
 
 </TabItem>
@@ -229,7 +225,7 @@ A `struct` creates an R `structure`, the name of the struct is used as `class`.
 ```r
 type userId: int
 
-type person struct {
+type person: struct {
   userId,
   name: char,
   age: int
@@ -267,7 +263,7 @@ object if you are not happy with the above.
 
 ```r
 @class(a, thing, on, wheels)
-type vehicle list {
+type vehicle: list {
   wheels: bool
 }
 
@@ -286,3 +282,21 @@ train = list(
 
 </TabItem>
 </Tabs>
+
+## List
+
+You can define lists of objects.
+
+```r
+type person: object {
+  name: char,
+  age: in
+}
+
+type persons: []person
+
+let x: persons = persons(
+  person(name = "John", age = 36),
+  person(name = "Jane", age = 35)
+)
+```
