@@ -297,7 +297,7 @@ type person: object {
 
 type people: []person
 
-let x: people = people(
+let group: people = people(
   person(name = "John", age = 36),
   person(name = "Jane", age = 35)
 )
@@ -307,7 +307,7 @@ let x: people = people(
 <TabItem value="r" label="R">
 
 ```r
-train = list(
+group = list(
   list(name = "John", age = 36),
   list(name = "Jane", age = 35)
 )

@@ -71,3 +71,28 @@ for(i in 1:10) {
 
 </TabItem>
 </Tabs>
+
+## Return
+
+In Vapour `return` is a keywork, not a function.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+func addOne(x: int): int {
+  return x + 1
+}
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+printIt <- function(x) {
+  return(x + 1)
+}
+```
+
+</TabItem>
+</Tabs>
