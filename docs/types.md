@@ -60,12 +60,6 @@ You can use any if you cannot know the actual type,
 let x: any = sum(1, 2, 3)
 ```
 
-:::warning
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
-
 ### Multiple  
 
 An object can be one of multiple types, separate the types with `|`.
@@ -117,13 +111,14 @@ john = 1
 </TabItem>
 </Tabs>
 
-### Complex
+### Objects 
 
 You can define complex types such as `dataframe`, `list`, `object`, and `struct`.
 
 #### List 
 
-An object is a named list.
+In Vapour a `list` is like a `list` in R but __cannot contained named objects,__
+see the `object` type for that effect.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
@@ -179,7 +174,7 @@ x = data.frame(
 
 #### Object
 
-The `object` is essentially a named list.
+The `object` is a a named list.
 
 :::info
 
@@ -263,19 +258,23 @@ object if you are not happy with the above.
 
 ```r
 @class(a, thing, on, wheels)
-type vehicle: list {
-  wheels: bool
+type vehicle: struct {
+  bool,
+  name: char
 }
 
-let train: vehicle = vehicle(wheels = false)
+let train: vehicle = vehicle(
+  FALSE,
+  wheels = false
+)
 ```
 
 </TabItem>
 <TabItem value="r" label="R">
 
 ```r
-train = list(
-  wheels = FALSE,
+train = structure(
+  FALSE,
   class = c("a", "thing", "on", "wheels")
 )
 ```
@@ -285,7 +284,10 @@ train = list(
 
 ## List
 
-You can define lists of objects.
+You can define lists of objects by preceding your type with `[]`.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
 
 ```r
 type person: object {
@@ -293,10 +295,23 @@ type person: object {
   age: in
 }
 
-type persons: []person
+type people: []person
 
-let x: persons = persons(
+let x: people = people(
   person(name = "John", age = 36),
   person(name = "Jane", age = 35)
 )
 ```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+train = list(
+  list(name = "John", age = 36),
+  list(name = "Jane", age = 35)
+)
+```
+
+</TabItem>
+</Tabs>

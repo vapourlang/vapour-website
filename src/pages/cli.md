@@ -88,7 +88,24 @@ vapour -infile=script.vp -outfile=script.R -run-only
 ### LSP
 
 This is to launch the Language Server Protocol and should not be run manually.
+This is only useful if you want to integrate Vapour with another editor.
+
+By default the LSP will use stdin and stdout.
+
+```bash
+vapour -lsp
+```
+
+You can serve it on a TCP server with:
+
+```bash
+vapour -lsp -tcp -port=3000
+```
 
 ### Version
 
 Retrieve the current vapour version.
+
+```bash
+vapour -version
+```
