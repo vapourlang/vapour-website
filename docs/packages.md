@@ -74,6 +74,13 @@ func addOne(x: int): int {
 }
 ```
 
+:::info
+
+In Vapour the order of the files matter, do not use a variable 
+declared in `b.vp` in `a.vp`.
+
+:::
+
 ## 5. Transpile
 
 Transpile the code to R.

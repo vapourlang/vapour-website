@@ -96,3 +96,26 @@ printIt <- function(x) {
 
 </TabItem>
 </Tabs>
+
+## Assignment
+
+In Vapour assignment is always done with the `=` sign,
+`<-` is not supported (sorry).
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+let x: int
+x = 1
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = 1
+```
+
+</TabItem>
+</Tabs>

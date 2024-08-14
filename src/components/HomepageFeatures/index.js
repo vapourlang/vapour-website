@@ -23,7 +23,7 @@ const FeatureList = [
     title: 'Build step',
     description: (
       <>
-        Leverage the LSP the build step to catch errors in your code.
+        Leverage the LSP and the build step to catch errors in your code.
       </>
     ),
   },
@@ -31,9 +31,9 @@ const FeatureList = [
 
 function Feature({title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--4')} style={{marginBottom: "3rem"}}>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h2">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>
@@ -42,7 +42,7 @@ function Feature({title, description}) {
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} style={{marginTop: "7rem"}}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (

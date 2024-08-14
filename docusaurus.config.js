@@ -89,6 +89,10 @@ const config = {
             title: "Docs",
             items: [
               {
+                label: "Get Started",
+                to: "/get-started",
+              },
+              {
                 label: "Docs",
                 to: "/docs",
               },
@@ -103,7 +107,7 @@ const config = {
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/devOpifex",
+                href: "https://twitter.com/jdatap",
               },
             ],
           },
@@ -112,7 +116,7 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/vapourlang/vapour",
+                href: "https://github.com/vapourlang",
               },
             ],
           },
