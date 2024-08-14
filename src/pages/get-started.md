@@ -8,13 +8,15 @@ First, [install](/install) the language, it's available for:
 - Mac
 - Windows
 
+Grab the latest release from [github](https://github.com/vapourlang/vapour/releases)
+
 ## Setup your editor
 
 There are plugins for:
 
-- Vscode
-- Neovim
-- Vim 
+- [Vscode](https://github.com/vapourlang/vapour-vscode)
+- [Neovim](git@github.com:vapourlang/vapour-nvim)
+- [Vim](git@github.com:vapourlang/vapour-vim)
 
 The plugins will provide syntax highlighting as well as the LSP.
 
@@ -23,7 +25,7 @@ The plugins will provide syntax highlighting as well as the LSP.
 With the language installed and your editor set up, you are ready to go!
 
 Vapour's syntax is somewhat different from that of R, you can see all the 
-way in which it differs [here](http://localhost:3000/docs/syntax).
+way in which it differs [here](/docs/syntax).
 
 Vapour's extension is `.vp`, create your first script.
 
