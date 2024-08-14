@@ -96,3 +96,11 @@ devtools::document()
 devtools::check()
 devtools::install()
 ```
+
+:::info
+
+Vapour does not read or parse roxygen2 `@import` or `@importFrom`,
+it is thus necessary to use the namespace `::` when calling functions
+from other packages.
+
+:::
