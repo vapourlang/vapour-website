@@ -66,8 +66,9 @@ const config = {
           { to: "/lsp", label: "LSP", position: "left" },
           { to: "/repl", label: "REPL", position: "left" },
           {
-            type: "docSidebar",
-            sidebarId: "sidebar",
+            type: "doc",
+            docId : "introduction",
+            sidebarId: "docs",
             position: "left",
             label: "Docs",
           },
