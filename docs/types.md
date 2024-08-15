@@ -19,12 +19,13 @@ Simple:
 - `na` - any
 - `null` - null
 
-Objects:
+Expressions:
 - `dataframe` - data.frame
 - `matrix` - matrix
 - `list` - list
 - `struct` - structure
 - `object` - named list 
+- `fn` - function
 
 :::info
 
@@ -111,7 +112,7 @@ john = 1
 </TabItem>
 </Tabs>
 
-### Objects 
+### Expressions
 
 You can define complex types such as `dataframe`, `list`, `object`, and `struct`.
 
@@ -282,7 +283,7 @@ train = structure(
 </TabItem>
 </Tabs>
 
-## List
+#### List
 
 You can define lists of objects by preceding your type with `[]`.
 
@@ -311,6 +312,49 @@ group = list(
   list(name = "John", age = 36),
   list(name = "Jane", age = 35)
 )
+```
+
+</TabItem>
+</Tabs>
+
+#### Functions
+
+You can define functions signatures to ensure you use
+the correct callback (generally) where needed.
+
+Note that the definition includes the parameter names but
+does not check for that, it will only check for the types
+of the arguments
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+type callback: func(x: int, y: int): int
+
+func foo(x: int, cb: callback): int {
+  return callback(x, 1)
+}
+
+# this is valid because the callback
+# has the same signature as the given type
+# accepts 2 ints and returns an int
+foo(2, (x: int, y: int): int => {
+  return x + y 
+})
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+foo <- function(x, cb) {
+  return cb(x, 1) 
+}
+
+foo(2, function(x, y) {
+  return x + y
+})
 ```
 
 </TabItem>
