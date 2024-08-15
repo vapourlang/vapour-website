@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Contribute from '@site/src/components/Contribute';
+import Roadmap from '@site/src/components/Roadmap';
 
 import styles from './index.module.css';
 
@@ -21,6 +22,7 @@ function HomepageHeader() {
             Get Started
           </Link>
         </div>
+        <i>Currently in alpha</i>
       </div>
     </header>
   );
@@ -66,6 +68,7 @@ export default function Home() {
         <HomepageFeatures />
         <ExampleCode></ExampleCode>
         <Contribute />
+        <Roadmap />
       </main>
     </Layout>
   );

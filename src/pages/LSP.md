@@ -2,6 +2,13 @@
 
 The language server protocol can be launched with `vapour -lsp`.
 
+:::info
+
+The LSP currently only provides diagnostics: feedback on your 
+code, type checking, etc. but does not provide autocompletion.
+
+:::
+
 ## Integrations
 
 ## Vim

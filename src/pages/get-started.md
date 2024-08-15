@@ -40,7 +40,7 @@ hello("Vapour")
 With your first scipt written you are ready to run the Vapour code.
 
 ```bash
-vapour -infile=script.vp -outfile=script.R --run-only
+vapour -infile=script.vp --run-only
 ```
 
 If you are happy with your code and wish to generate the corresponding R

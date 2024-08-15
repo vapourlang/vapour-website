@@ -3,7 +3,7 @@ import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const Items = [
   {
     title: 'Language',
     description: (
@@ -55,11 +55,11 @@ function Item({title, description}) {
 
 export default function Contribute() {
   return (
-    <section className={styles.features} style={{marginTop: "7rem", marginBottom: "7rem"}}>
+    <section className={styles.features} style={{marginTop: "7rem", marginBottom: "4rem"}}>
       <div className="container">
         <Heading as="h1" className={clsx(styles.center)} style={{marginBottom: "5rem"}}>Contribute</Heading>
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {Items.map((props, idx) => (
             <Item key={idx} {...props} />
           ))}
         </div>
