@@ -31,6 +31,8 @@ func create_user(id: int): user {
 Now we can define our methods on the `user` object, we'll define
 two methods to update the `id` and the `name` of a user.
 
+__Set ID__
+
 ```r
 func set_id(x: user, id: int, ...: any): person {
   UseMethod("set_id")
@@ -42,7 +44,11 @@ func (x: user) set_id(id: int, ...: any): user {
   x$id = id
   return x
 }
+```
 
+__Set name__
+
+```r
 func set_name(x: user, name: char, ...: any): person {
   UseMethod("set_name")
 }
@@ -53,4 +59,12 @@ func (x: user) set_name(name: char, ...: any): user {
   x$name = name
   return x
 }
+```
+
+With the methods created we can now used them!
+
+```r
+let john: user = create_user(1)
+
+john = set_name(john, "John")
 ```
