@@ -15,11 +15,11 @@ fact be almost significant. Vapour makes you write more code so you
 can read it faster, easily find bugs, actually enjoy refactor code,
 and reduce dependence on `R CMD check`.
 
-The language is written in files with the `.vp` extension, the language
+The language is written in files with the `.vp` extension, it
 then transpiles (transforms) the Vapour code from the `.vp` code to
 valid R code. This means that, in the very unfortunate event that
 you do not like Vapour, you can always go back to writing
-R code for a project written in Vapour.
+R code for a project written in Vapour since it is still available.
 
 This also means that Vapour adds a "build step" to your programs;
 a step between the code you write and the code that will run.
