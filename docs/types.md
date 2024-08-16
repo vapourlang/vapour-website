@@ -21,7 +21,7 @@ Expressions:
 - `list` - list
 - `struct` - structure
 - `object` - named list 
-- `fn` - function
+- `func` - function
 
 :::info
 
