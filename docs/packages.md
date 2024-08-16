@@ -58,7 +58,7 @@ dir.create("inst")
 
 Write some vapour code in the created `vp` directory.
 
-```r
+```vapour
 #' Add one
 #' 
 #' @param x An integer

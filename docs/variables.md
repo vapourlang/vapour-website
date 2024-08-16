@@ -13,7 +13,7 @@ __Mutable__ variables are declared with the `let` keyword.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: int = 1
 ```
 
@@ -32,7 +32,7 @@ Mutable variables can be declared without assigning a value to them.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: int # no value assigned
 x = 1
 ```
@@ -61,7 +61,7 @@ this is only checked in Vapour.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 const x: int = 1
 ```
 

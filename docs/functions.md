@@ -27,7 +27,7 @@ the function returns.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 func add(x: int, y: int): int {
   return x + y
 }
@@ -51,7 +51,7 @@ so use `null` instead.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 func add(x: char): null {
   print(x)
 }
@@ -77,7 +77,7 @@ unlike Javascript Vapour expects curly braces (`{}`).
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 lapply(1..10, (x: int): int => {
   return x + 1
 })
@@ -100,7 +100,7 @@ lapply(1:10, function(x) {
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type car struct {
   int,
   name: char

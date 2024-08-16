@@ -12,7 +12,7 @@ we always work with the right structure, and expected types.
 
 We define a `user` type.
 
-```r
+```vapour
 type user: object {
   id: int,
   name: char
@@ -21,7 +21,7 @@ type user: object {
 
 Now we can define a function that will create a `user`.
 
-```r
+```vapour
 func create_user(id: int): user {
   stopifnot(!missing(id))
   return user(id = id)
@@ -33,7 +33,7 @@ two methods to update the `id` and the `name` of a user.
 
 __Set ID__
 
-```r
+```vapour
 func set_id(x: user, id: int, ...: any): person {
   UseMethod("set_id")
 }
@@ -48,7 +48,7 @@ func (x: user) set_id(id: int, ...: any): user {
 
 __Set name__
 
-```r
+```vapour
 func set_name(x: user, name: char, ...: any): person {
   UseMethod("set_name")
 }
@@ -63,7 +63,7 @@ func (x: user) set_name(name: char, ...: any): user {
 
 With the methods created we can now used them!
 
-```r
+```vapour
 let john: user = create_user(1)
 
 john = set_name(john, "John")

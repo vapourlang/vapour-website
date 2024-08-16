@@ -9,7 +9,7 @@ Fibonacci sequence.
 
 Create a directory and place a `script.vp` file in it.
 
-```r
+```vapour
 func fibonacci(n: int): int {
   let a: int = 0
   let b: int = 1
@@ -42,7 +42,7 @@ warning already.
 
 You can then call the function once it's declared.
 
-```r
+```vapour
 # ... function declaration
 fibonacci(10)
 ```
@@ -69,7 +69,7 @@ has no default value.
 
 Running the code below will fail because `n` is missing.
 
-```r
+```vapour
 fibonacci()
 ```
 
@@ -79,7 +79,7 @@ or give the function a default value.
 <Tabs>
 <TabItem value="default" label="Default value">
 
-```r
+```vapour
 func fibonacci(n: int = 5): int {
   let a: int = 0
   let b: int = 1

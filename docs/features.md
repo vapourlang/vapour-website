@@ -5,7 +5,7 @@
 Vapour checks for types (where it can), ensuring that your code is consistent
 and that you do not get caught by `NA`s, or `NULL`s, etc.
 
-```r
+```vapour
 let x: int = 1
 
 # will fail, x is an int
@@ -23,7 +23,7 @@ y = 1
 With variables declaration via `let` and `const` we can check
 that variables are only declared once.
 
-```r
+```vapour
 let x: int = 1
 
 # will fail, x is already declared
@@ -48,7 +48,7 @@ type userid: num
 
 Vapour comes with constants so you can avoid squashing them on accident.
 
-```r
+```vapour
 const x: int = 1
 
 # will fail, it's a constant
@@ -58,7 +58,7 @@ x = 2
 
 Vapour will check that you only reference variables that do exist.
 
-```r
+```vapour
 # will warn that x does not exist
 print(x)
 ```
@@ -69,7 +69,7 @@ Vapour will warn you if you are using a package that is not installed
 or if you are using a function that is not exported by the package
 you call it from.
 
-```r
+```vapour
 # will warn that the package is not installed
 nonExistentPackge::foo()
 
@@ -81,7 +81,7 @@ dplyr::some_function()
 
 Vapour will check that you use all the variables, types, and functions you declare.
 
-```r
+```vapour
 let x: int = 1
 
 let total: int = x + 2
@@ -102,7 +102,7 @@ type userid: int
 
 Vapour will warn you if variables used within functions might be missing.
 
-```r
+```vapour
 # will warn that x can be missing
 func add(x: int): int {
   return x + 1

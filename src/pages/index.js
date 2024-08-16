@@ -5,6 +5,8 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Contribute from '@site/src/components/Contribute';
 import Roadmap from '@site/src/components/Roadmap';
+import '@site/src/vapour.js'
+import { Highlight, themes} from "prism-react-renderer"
 
 import styles from './index.module.css';
 
@@ -29,11 +31,7 @@ function HomepageHeader() {
 }
 
 function ExampleCode() {
-  return (
-  <section className="container" style={{marginTop: "5rem"}}>
-    <h2 style={{marginBottom: "2rem"}}>Example code</h2>
-    <pre className="prism-code language-r">
-      <code>{`
+  const code = `
   type person: object {
     age: int,
     name: char 
@@ -47,12 +45,27 @@ function ExampleCode() {
     p$age = age
   }
 
-  let john: person = create("john")
+  let john: person = create("John")
 
   set_age(john, 36)
-        `}
-      </code>
-    </pre>
+  `
+  return (
+  <section className="container" style={{marginTop: "5rem"}}>
+    <h2 style={{marginBottom: "2rem"}}>Example code</h2>
+    <Highlight code={code} language="vapour" theme={themes.dracula}>
+     {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      <pre style={style}>
+        {tokens.map((line, i) => (
+          <div key={i} {...getLineProps({ line })}>
+            <span>{i + 1}</span>
+            {line.map((token, key) => (
+              <span key={key} {...getTokenProps({ token })} />
+            ))}
+          </div>
+        ))}
+      </pre>
+    )}
+    </Highlight>
   </section>
   );
 }

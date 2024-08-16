@@ -10,7 +10,7 @@ In Vapour vectors are declared with parenthesis, without the need for `c` prefix
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: int = (1, 2, 3)
 ```
 
@@ -31,7 +31,7 @@ The `:` is used to define types in Vapour, so we use `..` for ranges.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: int = 1..10
 ```
 
@@ -52,7 +52,7 @@ The iterator needs to be declared with `let`.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 for(let i: int in 1..10) {
   print(i)
 }
@@ -77,7 +77,7 @@ In Vapour `return` is a keywork, not a function.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 func addOne(x: int): int {
   return x + 1
 }
@@ -102,7 +102,7 @@ Declare your variables before you used them.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: int
 x = 1
 ```
@@ -128,7 +128,7 @@ that you should not.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: char = "hello"
 ```
 
@@ -150,7 +150,7 @@ where one would use `<<-` in R.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: char = "hello"
 
 if(x == "world") {
@@ -179,7 +179,7 @@ We have constants!
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 const x: char = "a constant!"
 ```
 

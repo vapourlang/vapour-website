@@ -8,7 +8,7 @@ signature of callbacks passed to them.
 We can thus define a type for a function signature below:
 it expects an `int` as argument and must return an `int`
 
-```r
+```vapour
 type math: func(x: int): int
 ```
 
@@ -18,7 +18,7 @@ as callback.
 This ensures that we only pass functions that corresponds
 to our predefined expectations.
 
-```r
+```vapour
 func vectorise_math(vector: int, cb: math): int {
   return sapply(vector, cb)
 }
@@ -26,7 +26,7 @@ func vectorise_math(vector: int, cb: math): int {
 
 We can then use the function defined above
 
-```r
+```vapour
 vectorise_math((1, 2, 3), (x: int): int => {
   return x * 3
 })
@@ -41,7 +41,7 @@ functions that do not have the right signature,
 as shown below where the callback returns a `num`
 instead of an `int`.
 
-```r
+```vapour
 # will fail, callback is of the wrong signature.
 vectorise_math((1, 2, 3), (x: int): num => {
   return x / 2

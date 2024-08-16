@@ -34,7 +34,7 @@ will take quite some time to achieve.
 
 Types are __always preceded__ by a colon (`:`), e.g.: 
 
-```r
+```vapour
 let x: int = 1
 ```
 
@@ -53,7 +53,7 @@ a typed language.
 You can use any if you cannot know the actual type,
 `any` means that any type is accepted.
 
-```r
+```vapour
 let x: any = sum(1, 2, 3)
 ```
 
@@ -64,7 +64,7 @@ An object can be one of multiple types, separate the types with `|`.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 let x: int | na
 
 x = NA
@@ -92,7 +92,7 @@ underwhelming at first but quickly become interesting.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type userId: int
 
 let john: userId = 1
@@ -120,7 +120,7 @@ see the `object` type for that effect.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type lst: list {int | na}
 
 let counts: lst = lst(1, 2, 3, 4)
@@ -147,7 +147,7 @@ vectors.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type dataset: dataframe {
   id: num,
   name: char
@@ -189,7 +189,7 @@ All attributes must be named in an `object`.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type thing: object {
   id: num,
   name: char
@@ -224,7 +224,7 @@ A `struct` creates an R `structure`, the name of the struct is used as `class`.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type userId: int
 
 type person: struct {
@@ -263,7 +263,7 @@ object if you are not happy with the above.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 @class(a, thing, on, wheels)
 type vehicle: struct {
   bool,
@@ -296,7 +296,7 @@ You can define lists of objects by preceding your type with `[]`.
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type person: object {
   name: char,
   age: in
@@ -338,7 +338,7 @@ of the arguments
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
-```r
+```vapour
 type callback: func(x: int, y: int): int
 
 func foo(x: int, cb: callback): int {

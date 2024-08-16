@@ -68,7 +68,6 @@ const config = {
           {
             type: "doc",
             docId : "introduction",
-            sidebarId: "docs",
             position: "left",
             label: "Docs",
           },
@@ -121,8 +120,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Vapour.`,
       },
       prism: {
-        additionalLanguages: ["r"],
-        theme: prismThemes.github,
+        additionalLanguages: ["r", "vapour"],
+        theme: prismThemes.dracula,
         darkTheme: prismThemes.dracula,
       },
     }),
