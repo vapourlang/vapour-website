@@ -67,14 +67,14 @@ An object can be one of multiple types, separate the types with `|`.
 ```r
 let x: int | na
 
-x = na
+x = NA
 ```
 
 </TabItem>
 <TabItem value="r" label="R">
 
 ```r
-x = na
+x = c(NA)
 ```
 
 </TabItem>
@@ -102,7 +102,7 @@ let john: userId = 1
 <TabItem value="r" label="R">
 
 ```r
-john = 1
+john = c(1)
 ```
 
 </TabItem>
@@ -130,7 +130,10 @@ let counts: lst = lst(1, 2, 3, 4)
 <TabItem value="r" label="R">
 
 ```r
-counts = lst(1, 2, 3, 4)
+counts = structure(
+  list(1, 2, 3, 4),
+  class = c("lst", "list")
+)
 ```
 
 </TabItem>
@@ -160,9 +163,13 @@ let x = dataset(
 <TabItem value="r" label="R">
 
 ```r
-x = data.frame(
-  id = 1:10,
-  name = "John"
+x = structure(
+  data.frame(
+    id = 1:10,
+    name = "John"
+  ),
+  class = c("dataset", "data.frame"),
+  names = c("id", "name")
 )
 ```
 
@@ -198,9 +205,12 @@ let x = thing(
 <TabItem value="r" label="R">
 
 ```r
-x = list(
-  id = 1:10,
-  name = "John"
+x = structure(
+  list(
+    id = 1:10,
+    name = "John"
+  ),
+  class = c("thing", "list")
 )
 ```
 
@@ -279,7 +289,7 @@ train = structure(
 </TabItem>
 </Tabs>
 
-#### List
+#### Lists
 
 You can define lists of objects by preceding your type with `[]`.
 
@@ -304,9 +314,12 @@ let group: people = people(
 <TabItem value="r" label="R">
 
 ```r
-group = list(
-  list(name = "John", age = 36),
-  list(name = "Jane", age = 35)
+group = structure(
+  list(
+    structure(list(name="John"), class = c("person","list")), 
+    structure(list(name="Jane"), class = c("person","list"))
+  ), 
+  class = c("people","list")
 )
 ```
 
