@@ -116,10 +116,14 @@ x = 1
 </TabItem>
 </Tabs>
 
-## Assignment
+## Declaration & assignment
 
 In Vapour assignment is always done with the `=` sign,
 `<-` is used for something else (see next section).
+
+You also have to declare mutable variables with `let`, this 
+avoids shooting yourself in the foot overriding variables
+that you should not.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
