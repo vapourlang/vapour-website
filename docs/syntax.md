@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 
 ## Vectors
 
-In Vapour vectors are declared with parenthesis, without the need for `c`.
+In Vapour vectors are declared with parenthesis, without the need for `c` prefix.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
@@ -25,6 +25,8 @@ x = c(1, 2, 3)
 </Tabs>
 
 ## Range
+
+The `:` is used to define types in Vapour, so we use `..` for ranges.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
@@ -93,10 +95,9 @@ printIt <- function(x) {
 </TabItem>
 </Tabs>
 
-## Assignment
+## Declaration 
 
-In Vapour assignment is always done with the `=` sign,
-`<-` is not supported (sorry).
+Declare your variables before you used them.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
@@ -105,12 +106,84 @@ In Vapour assignment is always done with the `=` sign,
 let x: int
 x = 1
 ```
-
 </TabItem>
 <TabItem value="r" label="R">
 
 ```r
 x = 1
+```
+
+</TabItem>
+</Tabs>
+
+## Assignment
+
+In Vapour assignment is always done with the `=` sign,
+`<-` is used for something else (see next section).
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+let x: char = "hello"
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = "hello"
+```
+
+</TabItem>
+</Tabs>
+
+## Assign parent
+
+In Vapour `<-` is used to assign to a parent variable,
+where one would use `<<-` in R.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+let x: char = "hello"
+
+if(x == "world") {
+  x <- "it's world!"
+}
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = "hello"
+
+if(x == "world") {
+  x <<- "it's world!"
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Constants 
+
+We have constants!
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```r
+const x: char = "a constant!"
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = "a constant!"
 ```
 
 </TabItem>

@@ -3,7 +3,7 @@
 ## Type checking
 
 Vapour checks for types (where it can), ensuring that your code is consistent
-and that you do not get caught by `NA`s or `NULL`s.
+and that you do not get caught by `NA`s, or `NULL`s, etc.
 
 ```r
 let x: int = 1
@@ -15,6 +15,7 @@ let y: int | char = 1
 
 # this will work
 y = "hello"
+y = 1
 ```
 
 ## Variable declaration
@@ -48,16 +49,18 @@ Vapour will check that you only reference variables that do exist.
 print(x)
 ```
 
-## Function is exported
+## Packages & Functions
 
-Vapour will check that a function is indeed exported by a package
-if that function is called with its `::` namespace.
+Vapour will warn you if you are using a package that is not installed
+or if you are using a function that is not exported by the package
+you call it from.
 
 ```r
-dplyr::filter(cars, speed > 3)
+# will warn that the package is not installed
+nonExistentPackge::foo()
 
-# will warn
-dplyr::wrong_fn()
+# will warn that the function is not exported by that pacakge
+dplyr::some_function()
 ```
 
 ## Variables used
@@ -88,18 +91,4 @@ func add(x: int): int {
   stopifnot(!missing(x))
   return x + 1
 }
-```
-
-## Packages & Functions
-
-Vapour will warn you if you are using a package that is not installed
-or if you are using a function that is not exported by the package
-you call it from.
-
-```r
-# will warn that the package is not installed
-nonExistentPackge::foo()
-
-# will warn that the function is not exported by that pacakge
-dplyr::some_function()
 ```
