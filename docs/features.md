@@ -63,17 +63,25 @@ nonExistentPackge::foo()
 dplyr::some_function()
 ```
 
-## Variables used
+## Variables, types, and functions used
 
-Vapour will check that you used all the variables you declare.
+Vapour will check that you use all the variables, types, and functions you declare.
 
 ```r
 let x: int = 1
 
+let total: int = x + 2
+
 # will warn that y is never used
 let y: int = 1
 
-let total: int = x + 2
+# will warn that foo is never called
+func foo(): null {
+  print("something")
+}
+
+# will warn that userid is never used
+type userid: int
 ```
 
 ## Missing check
