@@ -11,6 +11,7 @@ const Items = [
         Help improve the language!
         <br/>
         <Link
+          style={{marginTop: "1rem"}}
           className={clsx("button button--primary button--lg", styles.white)}
           to="/contribute">
           Contribute
@@ -33,6 +34,7 @@ const Items = [
         Share your feedback in the form of Github.
         <br/>
         <Link
+          style={{marginTop: "1rem"}}
           className={clsx("button button--primary button--lg", styles.white)}
           to="https://github.com/vapourlang/vapour">
           Give feedback 
