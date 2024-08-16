@@ -12,7 +12,8 @@ If you were to add up all the time spent writing code and compare it
 to the amount of time spent glancing, reading, and parsing code to
 fix bugs or refactor, the amount of time spent writing code would in
 fact be almost significant. Vapour makes you write more code so you
-can read it faster, easily find bugs, and actually enjoy refactor code.
+can read it faster, easily find bugs, actually enjoy refactor code,
+and reduce dependence on `R CMD check`.
 
 The language is written in files with the `.vp` extension, the language
 then transpiles (transforms) the Vapour code from the `.vp` code to
