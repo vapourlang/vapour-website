@@ -18,7 +18,7 @@ y = "hello"
 y = 1
 ```
 
-## Variable declaration
+## Variable, type, and function declaration
 
 With variables declaration via `let` and `const` we can check
 that variables are only declared once.
@@ -28,6 +28,20 @@ let x: int = 1
 
 # will fail, x is already declared
 let x: char = 2
+
+func foo(): null {
+  print("hello")
+}
+
+# will fail, foo is already defined
+func foo(): null {
+  print("world")
+}
+
+type userid: int
+
+# will fail, type userid is already defined
+type userid: num
 ```
 
 ## Constants
@@ -49,7 +63,7 @@ Vapour will check that you only reference variables that do exist.
 print(x)
 ```
 
-## Packages & Functions
+## Packages & functions
 
 Vapour will warn you if you are using a package that is not installed
 or if you are using a function that is not exported by the package
