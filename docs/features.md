@@ -114,3 +114,12 @@ func add(x: int): int {
   return x + 1
 }
 ```
+
+## Generic
+
+Vapour lets you define a generic with a decorator.
+
+```vapour
+@generic
+func (x: any) my_method(...: any): any
+```

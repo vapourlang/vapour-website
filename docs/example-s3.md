@@ -22,9 +22,8 @@ type user: object {
 Now we can define a function that will create a `user`.
 
 ```vapour
-func create_user(id: int): user {
-  stopifnot(!missing(id))
-  return user(id = id)
+func create_user(): user {
+  return user()
 }
 ```
 
@@ -34,9 +33,8 @@ two methods to update the `id` and the `name` of a user.
 __Set ID__
 
 ```vapour
-func set_id(x: user, id: int, ...: any): person {
-  UseMethod("set_id")
-}
+@generic
+func (x: any) set_id(id: int, ...: any): user
 
 #' @export
 func (x: user) set_id(id: int, ...: any): user {
@@ -49,9 +47,8 @@ func (x: user) set_id(id: int, ...: any): user {
 __Set name__
 
 ```vapour
-func set_name(x: user, name: char, ...: any): person {
-  UseMethod("set_name")
-}
+@generic
+func (x: any) set_name(id: int, ...: any): user
 
 #' @export
 func (x: user) set_name(name: char, ...: any): user {
@@ -64,7 +61,7 @@ func (x: user) set_name(name: char, ...: any): user {
 With the methods created we can now used them!
 
 ```vapour
-let john: user = create_user(1)
-
-john = set_name(john, "John")
+let john: user = create_user() |>
+  set_id(1) |>
+  set_name("John")
 ```

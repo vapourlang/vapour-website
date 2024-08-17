@@ -7,6 +7,8 @@ import Contribute from '@site/src/components/Contribute';
 import Roadmap from '@site/src/components/Roadmap';
 import '@site/src/vapour.js'
 import { Highlight, themes} from "prism-react-renderer"
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 import styles from './index.module.css';
 
@@ -37,35 +39,87 @@ function ExampleCode() {
     name: char 
   }
 
-  func create(name: char): person {
+   func create(name: char): person {
     return person(name = name)
   }
 
-  func(p: person) set_age(age: int): null {
-    p$age = age
+  @generic
+  func (p: any) set_age(...: any): any
+
+  func(p: default) set_age(age: int): null {
+    stop("not implemented")
   }
 
-  let john: person = create("John")
+  func(p: person) set_age(age: int): person {
+    p$age = age
+    return p
+  }
 
-  set_age(john, 36)
-  `
+  let john: person = create("John") |>
+    set_age(36)`
+
+  const coder = `
+  create <- function(name: char) {
+    return structure(
+      list(
+        name = name
+      ),
+      class = c("person", "list")
+    )
+  }
+
+  set_age <- function(p, ...) {
+    UseMethod("set_age")
+  }
+
+  set_age.default <- function(p, age) {
+    stop("not implemented")
+  }
+
+  set_age.person <- function(p, age) {
+    attr(p, "age") <- age
+    return(p)
+  }
+
+  john <- create("John") |>
+    set_age(36)`
+
   return (
-  <section className="container" style={{marginTop: "5rem"}}>
-    <h2 style={{marginBottom: "2rem"}}>Example code</h2>
-    <Highlight code={code} language="vapour" theme={themes.dracula}>
-     {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre style={style}>
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line })}>
-            <span>{i + 1}</span>
-            {line.map((token, key) => (
-              <span key={key} {...getTokenProps({ token })} />
+  <section className="container" style={{marginTop: "0rem"}}>
+    <Tabs>
+      <TabItem value="vp" label="Vapour">
+        <Highlight code={code} language="vapour" theme={themes.dracula}>
+         {({ style, tokens, getLineProps, getTokenProps }) => (
+          <pre style={style}>
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line })}>
+                <span>{i + 1}</span>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token })} />
+                ))}
+              </div>
             ))}
-          </div>
-        ))}
-      </pre>
-    )}
-    </Highlight>
+          </pre>
+        )}
+        </Highlight>
+      </TabItem>
+      <TabItem value="r" label="R">
+        <Highlight code={coder} language="r" theme={themes.dracula}>
+         {({ style, tokens, getLineProps, getTokenProps }) => (
+          <pre style={style}>
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line })}>
+                <span>{i + 1}</span>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+        </Highlight>
+      </TabItem>
+    </Tabs>
   </section>
   );
 }
