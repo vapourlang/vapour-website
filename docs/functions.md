@@ -97,6 +97,8 @@ lapply(1:10, function(x) {
 
 ## Methods
 
+You can define methods on your custom types.
+
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
@@ -117,6 +119,79 @@ func (c: char) print(name: char): car {
 ```r
 add = function(x) {
   return(x)
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Class Decorator
+
+You can use the decorator `@class` to customise the class assigned to your
+object if you are not happy with the above.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+@class(a, thing, on, wheels)
+type vehicle: struct {
+  bool,
+  name: char
+}
+
+let train: vehicle = vehicle(
+  FALSE,
+  wheels = false
+)
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+train = structure(
+  FALSE,
+  class = c("a", "thing", "on", "wheels")
+)
+```
+
+</TabItem>
+</Tabs>
+
+### Generic Decorator
+
+You can use the decorator `@generic` to define a generic
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+type user: object {
+  id: int,
+  name: char
+}
+
+@generic
+func (u: any) set_id(id: int): any
+
+func (u: user) set_id(id: int): user {
+  u$id = id
+  return u
+}
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+set_id <- function(u, id) {
+  UseMethod("set_id")
+}
+
+set_id.user <- function(u, id) {
+  u$id = id
+  return(user)
 }
 ```
 

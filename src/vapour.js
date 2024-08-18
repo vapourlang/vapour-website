@@ -10,6 +10,8 @@ Prism.languages.vapour = {
 		pattern: /%[^%\s]*%/,
 		alias: 'operator'
 	},
+  'class-name': /\: (.*)/,
+	'symbol': /\@.*/,
 	'boolean': /\b(?:FALSE|TRUE)\b/,
 	'ellipsis': /\.\.(?:\.|\d+)/,
 	'number': [

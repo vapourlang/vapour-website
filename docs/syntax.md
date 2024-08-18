@@ -97,7 +97,8 @@ printIt <- function(x) {
 
 ## Defer
 
-Vapour adds the `defer` keywords which translates to `on.exit`.
+Vapour adds the `defer` keywords which translates to `on.exit`,
+`defer` expects an anonymous function.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
@@ -125,27 +126,6 @@ addOne <- function(x) {
   print("first")
   return x + 1
 }
-```
-
-</TabItem>
-</Tabs>
-
-## Declaration 
-
-Declare your variables before you used them.
-
-<Tabs>
-<TabItem value="vp" label="Vapour">
-
-```vapour
-let x: int
-x = 1
-```
-</TabItem>
-<TabItem value="r" label="R">
-
-```r
-x = 1
 ```
 
 </TabItem>

@@ -5,6 +5,8 @@ them more robust by setting custom types for callbacks
 so that functions that accept callbacks will check for the
 signature of callbacks passed to them.
 
+> This is a silly example as these functions are already vectorised.
+
 We can thus define a type for a function signature below:
 it expects an `int` as argument and must return an `int`
 

@@ -57,7 +57,7 @@ You can use any if you cannot know the actual type,
 let x: any = sum(1, 2, 3)
 ```
 
-### Multiple  
+## Multiple  
 
 An object can be one of multiple types, separate the types with `|`.
 
@@ -178,7 +178,7 @@ x = structure(
 
 #### Object
 
-The `object` is a a named list.
+The `object` is a named list.
 
 :::info
 
@@ -255,41 +255,7 @@ john = structure(
 </TabItem>
 </Tabs>
 
-#### Decorator
-
-You can use the decorator `@class` to customise the class assigned to your
-object if you are not happy with the above.
-
-<Tabs>
-<TabItem value="vp" label="Vapour">
-
-```vapour
-@class(a, thing, on, wheels)
-type vehicle: struct {
-  bool,
-  name: char
-}
-
-let train: vehicle = vehicle(
-  FALSE,
-  wheels = false
-)
-```
-
-</TabItem>
-<TabItem value="r" label="R">
-
-```r
-train = structure(
-  FALSE,
-  class = c("a", "thing", "on", "wheels")
-)
-```
-
-</TabItem>
-</Tabs>
-
-#### Lists
+#### Object 
 
 You can define lists of objects by preceding your type with `[]`.
 

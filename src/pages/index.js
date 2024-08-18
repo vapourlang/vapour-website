@@ -33,13 +33,12 @@ function HomepageHeader() {
 }
 
 function ExampleCode() {
-  const code = `
-  type person: object {
+  const code = `  type person: object {
     age: int,
     name: char 
   }
 
-   func create(name: char): person {
+  func create(name: char): person {
     return person(name = name)
   }
 
@@ -58,8 +57,7 @@ function ExampleCode() {
   let john: person = create("John") |>
     set_age(36)`
 
-  const coder = `
-  create <- function(name: char) {
+  const coder = `  create <- function(name: char) {
     return structure(
       list(
         name = name

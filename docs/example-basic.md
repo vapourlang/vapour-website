@@ -99,7 +99,7 @@ func fibonacci(n: int = 5): int {
 </TabItem>
 <TabItem value="missing" label="Missing check">
 
-```r
+```vapour
 func fibonacci(n: int): int {
   stopifnot(!missing(n))
 
