@@ -26,24 +26,24 @@ function HomepageHeader() {
             Get Started
           </Link>
         </div>
-        <i>Currently in alpha</i>
-      </div>
-    </header>
-  );
-}
-
-function ExampleCode() {
-  const code = `  type person: object {
-    age: int,
-    name: char 
-  }
-
-  func create(name: char): person {
-    return person(name = name)
-  }
-
-  @generic
-  func (p: any) set_age(...: any): any
+        <i>Currently in <span style={{color: "#eab308"}}>alpha</span></i>
+      </div>                
+    </header>               
+  );                       
+}                           
+                            
+function ExampleCode() {   
+  const code = `   type person: object {
+     age: int,              
+     name: char             
+   }                       
+                            
+   func create(name: char):  person {
+     return person(name = n ame)
+   }                        
+                           
+  @generic                  
+  func (p: any) set_age(... : any): any
 
   func(p: default) set_age(age: int): null {
     stop("not implemented")
@@ -57,14 +57,14 @@ function ExampleCode() {
   let john: person = create("John") |>
     set_age(36)`
 
-  const coder = `  create <- function(name: char) {
-    return structure(
-      list(
-        name = name
-      ),
-      class = c("person", "list")
-    )
-  }
+  const coder = `   create <- function(name: char) {
+     return(structure(
+       list(
+         name = name
+       ),
+       class = c("person", "list")
+     )
+   })
 
   set_age <- function(p, ...) {
     UseMethod("set_age")

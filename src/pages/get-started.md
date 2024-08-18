@@ -1,5 +1,7 @@
 # Get Started
 
+Get Started with Vapour, it's easy as pie.
+
 ## Install
 
 First, [install](/install) the language, it's available for:
