@@ -1,3 +1,10 @@
+---
+toc_min_heading_level: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Features
 
 ## Type checking
@@ -114,14 +121,32 @@ func add(x: int): int {
 
 Vapour lets you define a generic with a decorator.
 
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
 ```vapour
 @generic
 func (x: any) my_method(...: any): any
 ```
 
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+my_method <- function(x, ...) {
+  UseMethod("my_method")
+}
+```
+
+</TabItem>
+</Tabs>
+
 ## Default
 
 Vapour lets you define a default method with a decorator.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
 
 ```vapour
 @default
@@ -129,3 +154,15 @@ func (x: any) my_method(...: any): any {
   stop("Not implemented")
 }
 ```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+my_method.default <- function(x, ...) {
+  stop("Not implemented")
+}
+```
+
+</TabItem>
+</Tabs>

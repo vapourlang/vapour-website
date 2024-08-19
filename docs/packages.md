@@ -34,6 +34,8 @@ dir.create("vp")
 </TabItem>
 </Tabs>
 
+## 3. Inst
+
 Second, create the `inst` directory, this is where Vapour will
 output a file containing your custom types.
 

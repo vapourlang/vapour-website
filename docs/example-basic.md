@@ -9,7 +9,7 @@ Fibonacci sequence.
 
 Create a directory and place a `script.vp` file in it.
 
-```vapour
+```vapour showLineNumbers
 func fibonacci(n: int): int {
   let a: int = 0
   let b: int = 1
@@ -79,7 +79,7 @@ or give the function a default value.
 <Tabs>
 <TabItem value="default" label="Default value">
 
-```vapour
+```vapour {1} showLineNumbers
 func fibonacci(n: int = 5): int {
   let a: int = 0
   let b: int = 1
@@ -99,7 +99,7 @@ func fibonacci(n: int = 5): int {
 </TabItem>
 <TabItem value="missing" label="Missing check">
 
-```vapour
+```vapour {2} showLineNumbers
 func fibonacci(n: int): int {
   stopifnot(!missing(n))
 
