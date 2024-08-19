@@ -1,10 +1,8 @@
 # Introduction
 
-Vapour is a typed superset of R, in other words,
-it is somewhat like writing R code but with type declarations
-(and some neat other little features).
+Vapour is a typed superset of R.
 
-Vapour code is bound to be different from R and will always be
+Vapour code is bound to be different from R and will likely be
 more verbose. The aim of the language is to make (R) code more readable,
 maintainable, and robust.
 
@@ -12,8 +10,8 @@ If you were to add up all the time spent writing code and compare it
 to the amount of time spent glancing, reading, and parsing code to
 fix bugs or refactor, the amount of time spent writing code would in
 fact be almost significant. Vapour makes you write more code so you
-can read it faster, easily find bugs, actually enjoy refactor code,
-and reduce dependence on `R CMD check`.
+can read it faster, easily find bugs, actually enjoy refactoring code,
+and reduce runtime errors.
 
 The language is written in files with the `.vp` extension, it
 then transpiles (transforms) the Vapour code from the `.vp` code to
