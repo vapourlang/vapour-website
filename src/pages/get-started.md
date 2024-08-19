@@ -1,6 +1,6 @@
 # Get Started
 
-Get Started with Vapour, it's easy as pie.
+Get Started with Vapour, it's easy as pie!
 
 ## Install
 
@@ -17,8 +17,8 @@ Grab the latest release from [github](https://github.com/vapourlang/vapour/relea
 There are plugins for:
 
 - [Vscode](https://github.com/vapourlang/vapour-vscode)
-- [Neovim](git@github.com:vapourlang/vapour-nvim)
-- [Vim](git@github.com:vapourlang/vapour-vim)
+- [Neovim](https://github.com:vapourlang/vapour-nvim)
+- [Vim](https://github.com:vapourlang/vapour-vim)
 
 The plugins will provide syntax highlighting as well as the LSP.
 
@@ -32,7 +32,7 @@ way in which it differs [here](/docs/syntax).
 Vapour's extension is `.vp`, create your first script.
 
 ```r
-func hello(what: char = "Vapour"): char {
+func hello(what: char): char {
   return sprintf("Hello, %s", what)
 }
 
@@ -49,5 +49,5 @@ If you are happy with your code and wish to generate the corresponding R
 code rerun the above command, ommitting the `-run-only` flag.
 
 ```bash
-vapour -infile=script.vp -outfile=script.R
+vapour -infile=script.vp
 ```
