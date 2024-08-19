@@ -8,12 +8,12 @@ const Items = [
     description: 'Infer types from base R so type checking can be executed.',
   },
   {
-    entry: 'Complete LSP',
-    description: 'The LSP currently only provides diagnostics, it should also provide autocompletion, help pages, definitions, and more.',
+    entry: 'Autocompletion LSP',
+    description: 'The LSP currently only provides diagnostics, it should also provide autocompletion (and maybe more).',
   },
   {
     entry: 'Vapour type inference',
-    description: 'Infer types within Vapour to slightly reduce type declarations.',
+    description: 'Infer types in Vapour to reduce verbosity a tad.',
   },
   {
     entry: 'Vapour package development tools',
