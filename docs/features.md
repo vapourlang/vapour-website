@@ -118,3 +118,14 @@ Vapour lets you define a generic with a decorator.
 @generic
 func (x: any) my_method(...: any): any
 ```
+
+## Default
+
+Vapour lets you define a default method with a decorator.
+
+```vapour
+@default
+func (x: any) my_method(...: any): any {
+  stop("Not implemented")
+}
+```

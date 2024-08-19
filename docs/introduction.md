@@ -6,10 +6,13 @@ Vapour code is bound to be different from R and will likely be
 more verbose. The aim of the language is to make (R) code more readable,
 maintainable, and robust.
 
-If you were to add up all the time spent writing code and compare it
-to the amount of time spent glancing, reading, and parsing code to
-fix bugs or refactor, the amount of time spent writing code would in
-fact be almost significant. Vapour makes you write more code so you
+If you were to add up all the time spent writing code, glancing, 
+reading, and parsing code to
+fix bugs or refactor, you will notice that 
+the amount of time spent writing the code s in
+fact almost significant. 
+
+> Vapour makes you write more code so you
 can read it faster, easily find bugs, actually enjoy refactoring code,
 and reduce runtime errors.
 
