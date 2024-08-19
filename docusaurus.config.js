@@ -121,7 +121,7 @@ const config = {
       },
       prism: {
         additionalLanguages: ["r", "vapour"],
-        theme: prismThemes.dracula,
+        theme: prismThemes.oneLight,
         darkTheme: prismThemes.dracula,
       },
     }),
