@@ -39,7 +39,7 @@ function ExampleCode() {
    }                       
                             
    func create(name: char):  person {
-     return person(name = n ame)
+     return person(name = name)
    }                        
                            
   @generic                  
