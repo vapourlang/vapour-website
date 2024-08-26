@@ -195,6 +195,13 @@ if(x == "world") {
 
 We have constants!
 
+:::info
+
+This is only checked in Vapour, we do not lock the
+binding in the transpiled code.
+
+:::
+
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
@@ -207,6 +214,27 @@ const x: char = "a constant!"
 
 ```r
 x = "a constant!"
+```
+
+</TabItem>
+</Tabs>
+
+## Booleans
+
+Booleans cannot be shortened, use `TRUE`, and `FALSE`.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+const x: bool = TRUE
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = TRUE
 ```
 
 </TabItem>

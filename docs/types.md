@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 ## Built-in Types
 
-Simple:
+Vectors:
 - `int` - integer
 - `num` - numeric
 - `char` - character
@@ -19,7 +19,7 @@ Simple:
 - `na` - any
 - `null` - null
 
-Expressions:
+Objects:
 - `dataframe` - data.frame
 - `matrix` - matrix
 - `list` - list
@@ -88,7 +88,7 @@ x = c(NA)
 
 You can declare your own custom types with the `type` keyword.
 
-### Simple
+### Vectors 
 
 You can define simple types such as below, these can seem 
 underwhelming at first but quickly become interesting.
@@ -112,7 +112,7 @@ john = c(1)
 </TabItem>
 </Tabs>
 
-### Expressions
+### Objects 
 
 You can define complex types such as `dataframe`, `list`, `object`, and `struct`.
 
@@ -125,9 +125,9 @@ see the `object` type for that effect.
 <TabItem value="vp" label="Vapour">
 
 ```vapour
-type lst: list {int | na}
+type lst: list { int | na }
 
-let counts: lst = lst(1, 2, 3, 4)
+let counts: lst = lst(1, NA, 3, 4)
 ```
 
 </TabItem>
@@ -182,7 +182,7 @@ x = structure(
 
 #### Object
 
-The `object` is a named list.
+The `object` is a named `list`.
 
 :::info
 
@@ -259,7 +259,7 @@ john = structure(
 </TabItem>
 </Tabs>
 
-#### Object 
+#### Implied lists
 
 You can define lists of objects by preceding your type with `[]`.
 
@@ -291,49 +291,6 @@ group = structure(
   ), 
   class = c("people","list")
 )
-```
-
-</TabItem>
-</Tabs>
-
-#### Functions
-
-You can define functions signatures to ensure you use
-the correct callback (generally) where needed.
-
-Note that the definition includes the parameter names but
-does not check for that, it will only check for the types
-of the arguments
-
-<Tabs>
-<TabItem value="vp" label="Vapour">
-
-```vapour
-type callback: func(x: int, y: int): int
-
-func foo(x: int, cb: callback): int {
-  return callback(x, 1)
-}
-
-# this is valid because the callback
-# has the same signature as the given type
-# accepts 2 ints and returns an int
-foo(2, (x: int, y: int): int => {
-  return x + y 
-})
-```
-
-</TabItem>
-<TabItem value="r" label="R">
-
-```r
-foo <- function(x, cb) {
-  return cb(x, 1) 
-}
-
-foo(2, function(x, y) {
-  return x + y
-})
 ```
 
 </TabItem>
