@@ -101,7 +101,7 @@ printIt <- function(x) {
 
 ## Defer
 
-Vapour adds the `defer` keywords which translates to `on.exit`,
+Vapour adds the `defer` keyword which translates to `on.exit`,
 `defer` expects an anonymous function.
 
 <Tabs>
@@ -221,13 +221,13 @@ x = "a constant!"
 
 ## Booleans
 
-Booleans cannot be shortened, use `TRUE`, and `FALSE`.
+Booleans are denoted with `true` and `false`.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">
 
 ```vapour
-const x: bool = TRUE
+const x: bool = true
 ```
 
 </TabItem>

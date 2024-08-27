@@ -141,8 +141,8 @@ type vehicle: struct {
 }
 
 let train: vehicle = vehicle(
-  FALSE,
-  wheels = false
+  false,
+  name = "tchoo tchoo"
 )
 ```
 
@@ -152,6 +152,7 @@ let train: vehicle = vehicle(
 ```r
 train = structure(
   FALSE,
+  name = "tchoo tchoo",
   class = c("a", "thing", "on", "wheels")
 )
 ```

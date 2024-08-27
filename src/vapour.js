@@ -12,7 +12,7 @@ Prism.languages.vapour = {
 	},
   'class-name': /(?<=:) ([a-z]*)|(?<=\|) ([a-z]*)/,
 	'symbol': /\@.*/,
-	'boolean': /\b(?:FALSE|TRUE)\b/,
+	'boolean': /\b(?:false|true)\b/,
 	'ellipsis': /\.\.(?:\.|\d+)/,
 	'number': [
 		/\b(?:Inf|NaN)\b/,
