@@ -38,7 +38,7 @@ function ExampleCode() {
      name: char             
    }                       
                             
-   func create(name: char):  person {
+   func create(name: char): person {
      return person(name = name)
    }                        
                            
