@@ -23,7 +23,7 @@ const FeatureList = [
     title: 'Build step',
     description: (
       <>
-        Leverage the LSP and transpilation to catch errors at build time!at build time!
+        Leverage the LSP and transpilation to catch errors at build time!
       </>
     ),
   },
