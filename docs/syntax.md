@@ -239,3 +239,26 @@ x = TRUE
 
 </TabItem>
 </Tabs>
+
+## Assignments
+
+Vapour supports addition (`+=`) and substitution assignments (`-=`).
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+let x: int = 40
+x += 2
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = 40
+x = x + 2
+```
+
+</TabItem>
+</Tabs>
