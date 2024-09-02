@@ -10,9 +10,9 @@ Install the CLI in any way you prefer.
 
 Prebuilt binaries.
 
-- Linux: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_x86_64.tar.gz) [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_arm64.tar.gz)
-- Mac OS: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Darwin_x86_64.tar.gz) [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Darwin_arm64.tar.gz)
-- Windows: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Windows_x86_64.tar.gz) [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Windows_arm64.tar.gz)
+- Linux: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_x86_64.tar.gz) | [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_arm64.tar.gz)
+- Mac OS: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Darwin_x86_64.tar.gz) | [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Darwin_arm64.tar.gz)
+- Windows: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Windows_x86_64.tar.gz) | [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Windows_arm64.tar.gz)
 
 ## Go
 
