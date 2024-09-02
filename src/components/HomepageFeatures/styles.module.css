@@ -6,6 +6,25 @@
   margin-top: 5rem;
 }
 
+.feature {
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  margin: .5rem;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.feature:hover {
+  border-color: var(--ifm-color-primary-dark);
+  color: white;
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.feature:hover .featureLink{
+  color: white;
+  font-weight: bold;
+}
+
 .featureSvg {
   height: 200px;
   width: 200px;

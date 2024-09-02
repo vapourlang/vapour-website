@@ -8,6 +8,16 @@ const FeatureList = [
     description: (
       <>
         Leverage types to write more robust code.
+        <br/>
+        <a className={styles.featureLink} href="/docs/types">Discover types!</a>
+      </>
+    ),
+  },
+  {
+    title: 'Robust code',
+    description: (
+      <>
+        Leverage the LSP and transpilation to catch errors at build time!
       </>
     ),
   },
@@ -16,14 +26,8 @@ const FeatureList = [
     description: (
       <>
         Use Vapour's improved syntax to write nicer, more readable code.
-      </>
-    ),
-  },
-  {
-    title: 'Build step',
-    description: (
-      <>
-        Leverage the LSP and transpilation to catch errors at build time!
+        <br/>
+        <a className={styles.featureLink} href="/docs/syntax">Take a look</a>
       </>
     ),
   },
@@ -31,7 +35,7 @@ const FeatureList = [
 
 function Feature({title, description}) {
   return (
-    <div className={clsx('col col--4')} style={{marginBottom: "3rem"}}>
+    <div className={clsx('col', styles.feature)}>
       <div className="text--center padding-horiz--md">
         <Heading as="h2">{title}</Heading>
         <p>{description}</p>

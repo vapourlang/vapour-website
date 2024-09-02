@@ -33,10 +33,10 @@ const Items = [
   },
 ];
 
-function Item({entry, description}) {
+function Item({key, entry, description}) {
   return (
     <div className={clsx(styles.item)}>
-      <p className={clsx(styles.title)}>{entry}</p>
+      <p className={clsx(styles.title)}>{key} {entry}</p>
       <p>{description}</p>
     </div>
   );

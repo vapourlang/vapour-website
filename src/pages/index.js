@@ -18,15 +18,20 @@ function HomepageHeader() {
     <header className={clsx('hero hero--secondary', styles.heroBanner)}>
       <div className="container">
         <img src="/img/vapour.png"/>
-        <p className={clsx("hero__subtitle", styles.tagline)}>{siteConfig.tagline}</p>
+        <p className={clsx("hero__title", styles.tagline)}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--primary button--lg", styles.white)}
             to="/get-started">
             Get Started
           </Link>
+          <Link
+            className={clsx("button button--secondary button--lg", styles.white)}
+            to="/install">
+            Install
+          </Link>
         </div>
-        <i>Currently in <span style={{color: "#eab308"}}>alpha</span></i>
+        <small>Currently in <span style={{textDecoration: "underline"}}>alpha</span></small>
       </div>                
     </header>               
   );                       
