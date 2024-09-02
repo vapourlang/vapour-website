@@ -6,16 +6,16 @@ sidebar_position: 1
 
 Install the CLI in any way you prefer.
 
-## Binary
+## Download
 
-1. Download the right binary for your OS and architecture 
-from the [releases](https://github.com/vapourlang/vapour/releases),
-__Linux__, __Mac__, __Windows__ available.
-2. Untar
-3. Run `./vapour`
-4. (optionally) add to your path and run `vapour`
+Prebuilt binaries.
+
+- Mac OS: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Darwin_x86_64.tar.gz) [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Darwin_arm64.tar.gz)
+- Linux: [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_x86_64.tar.gz) [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_arm64.tar.gz)
 
 ## Go
+
+If you have go installed you can just run.
 
 ```bash
 go install vapourlang/vapour
