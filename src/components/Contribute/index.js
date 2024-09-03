@@ -46,7 +46,7 @@ const Items = [
 
 function Item({title, description}) {
   return (
-    <div className={clsx('col col--4')} style={{marginBottom: "3rem"}}>
+    <div className={clsx('col')} style={{marginBottom: "3rem"}}>
       <div className="text--center padding-horiz--md">
         <Heading as="h2">{title}</Heading>
         <p>{description}</p>

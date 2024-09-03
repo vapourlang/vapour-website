@@ -58,15 +58,3 @@ These follow the LSP standards where they are resurfaced.
 
 The transpiler does a very similar job to the walker but emits R code:
 it transforms the input Vapour code into (hopefully) valid R code.
-
-## State of Vapour
-
-I'm rather confident in the lexer and parser, they seem robust enough
-and are based on existing work that was proven to be efficient.
-
-The walker and transpiler are rather convoluted and probably not 
-as robust as the rest of the code.
-_If you want to contribute to the I would thus look at these._
-
-However, these may be difficult to approach, what Vapour also lacks
-is developer tools: an improved LSP, better syntax highlighting, etc.

@@ -12,3 +12,9 @@
   font-weight: bold;
   font-size: larger;
 }
+
+.item:hover {
+  border-color: var(--ifm-color-primary-dark);
+  color: white;
+  background-color: var(--ifm-color-primary-dark);
+}

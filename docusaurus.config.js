@@ -117,7 +117,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Vapour.`,
+        copyright: `Vapour ${new Date().getFullYear()}.`,
       },
       prism: {
         additionalLanguages: ["r", "vapour", "json"],
