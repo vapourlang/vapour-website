@@ -120,7 +120,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Vapour.`,
       },
       prism: {
-        additionalLanguages: ["r", "vapour"],
+        additionalLanguages: ["r", "vapour", "json"],
         theme: prismThemes.oneLight,
         darkTheme: prismThemes.dracula,
       },
