@@ -36,7 +36,7 @@ const Items = [
         <Link
           style={{marginTop: "1rem"}}
           className={clsx("button button--primary button--lg", styles.white)}
-          to="https://github.com/vapourlang/vapour">
+          to="https://github.com/vapourlang/vapour/issues">
           Give feedback 
         </Link>
       </>
