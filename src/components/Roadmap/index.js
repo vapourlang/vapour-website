@@ -6,37 +6,44 @@ const Items = [
   {
     entry: 'R type inference',
     description: 'Infer types from base R so type checking can be executed.',
+    n: 1,
   },
   {
     entry: 'Autocompletion LSP',
     description: 'The LSP currently only provides diagnostics, it should also provide autocompletion (and maybe more).',
+    n: 2,
   },
   {
     entry: 'Vapour type inference',
     description: 'Infer types in Vapour to reduce verbosity a tad.',
+    n: 3,
   },
   {
     entry: 'Vapour package development tools',
     description: 'Vapour could probably provide functionalities similar to those provided by devtools.',
+    n: 4,
   },
   {
     entry: 'Improve transpiler',
     description: 'The transpiler currently outputs valid but extremely ugly R code.',
+    n: 5,
   },
   {
     entry: 'Formatter',
     description: 'Include a formatter.',
+    n: 6,
   },
   {
     entry: 'Extensions',
     description: 'Allow extending Vapour, e.g.: with @decorators',
+    n: 7,
   },
 ];
 
-function Item({key, entry, description}) {
+function Item({n, entry, description}) {
   return (
     <div className={clsx(styles.item)}>
-      <p className={clsx(styles.title)}>{key} {entry}</p>
+      <p className={clsx(styles.title)}>{n}) {entry}</p>
       <p>{description}</p>
     </div>
   );

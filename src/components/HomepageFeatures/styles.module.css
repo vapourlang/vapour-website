@@ -16,12 +16,12 @@
 
 .feature:hover {
   border-color: var(--ifm-color-primary-dark);
-  color: white;
+  color: var(--ifm-background-color);
   background-color: var(--ifm-color-primary-dark);
 }
 
 .feature:hover .featureLink{
-  color: white;
+  color: var(--ifm-background-color);
   font-weight: bold;
 }
 

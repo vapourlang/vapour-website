@@ -76,13 +76,13 @@ vapour -infile=script.vp -outfile=script.R -check-only
 ### Run
 
 You can use any of the transpile commands above but add the `-run-only` flag
-to---not transpile the file---and instead run them in R directly
+to&mdash;not transpile the file&mdash;and instead run them in R directly
 (not generating the transpiled R code).
 
 ```bash
-vapour -indir=vp -outdir=R -run-only
+vapour -indir=vp -run-only
 
-vapour -infile=script.vp -outfile=script.R -run-only
+vapour -infile=script.vp -run-only
 ```
 
 ### LSP
