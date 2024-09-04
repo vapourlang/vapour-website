@@ -59,12 +59,13 @@ const items = [
         <Heading as="h2">Robustness</Heading>
         <p>
           Disassociating the code written by the developer from the code
-          that ultimately is being run allows sifting through the written
-          code for error checking.
+          that ultimately is being run allows checking the written
+          code for errors so they can be fixed before they are encountered.
         </p>
         <p>
           Vapour can check for flagrant problems in the code at the time 
-          it is being written; before the code runs.
+          your write it, letting fix them before they reach your users or even
+          tests.
         </p>
       </>
     ),
@@ -92,14 +93,14 @@ const items = [
       <>
         <Heading as="h2">Types</Heading>
         <p>
-          With the rise of cynamically typed programming langauges 
-          developers have found out the hard way that, it turns out,
+          With the rise of dynamically typed programming languages 
+          developers have found out that, it turns out,
           types were not just to help the compiler, they actually
-          help the developer even more.
+          help the developer just as much.
         </p>
         <p>
-          In R, we get caught out by <code>NA</code>, or <code>NULL</code>
-          values too often.
+          In R, we get caught out by <code>NA</code>, or <code>NULL</code> 
+          values too often, not with Vapour.
         </p>
       </>
     ),
