@@ -29,12 +29,4 @@
   --ifm-background-color: #211533;
   --ifm-navbar-search-input-background-color: #170e26;
   --ifm-hero-background-color: #8358c3;
-
-  body, section, main, nav {
-    background-color: #211533;
-  }
-
-  pre, code, footer {
-    background-color: #170e26 !important;
-  }
 }

@@ -49,7 +49,11 @@ const config = {
 
   themeConfig:
     ({
-      // Replace with your project's social card
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       image: "img/vapour-social.png",
       navbar: {
         title: "Vapour",
