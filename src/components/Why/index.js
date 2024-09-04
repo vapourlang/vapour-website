@@ -56,6 +56,20 @@ const items = [
   {
     left: (
       <>
+        <Heading as="h2">Robustness</Heading>
+        <p>
+          Disassociating the code written by the developer from the code
+          that ultimately is being run allows sifting through the written
+          code for error checking.
+        </p>
+        <p>
+          Vapour can check for flagrant problems in the code at the time 
+          it is being written; before the code runs.
+        </p>
+      </>
+    ),
+    right: (
+      <>
         <Highlight code={robustCode} language="vapour" theme={themes.dracula}>
          {({ style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
@@ -70,20 +84,6 @@ const items = [
           </pre>
         )}
         </Highlight>
-      </>
-    ),
-    right: (
-      <>
-        <Heading as="h2">Robustness</Heading>
-        <p>
-          Disassociating the code written by the developer from the code
-          that ultimately is being run allows sifting through the written
-          code for error checking.
-        </p>
-        <p>
-          Vapour can check for flagrant problems in the code at the time 
-          it is being written; before the code runs.
-        </p>
       </>
     ),
   },
