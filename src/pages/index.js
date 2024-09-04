@@ -9,6 +9,7 @@ import '@site/src/vapour.js'
 import { Highlight, themes} from "prism-react-renderer"
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Why from '../components/Why';
 
 import styles from './index.module.css';
 
@@ -31,7 +32,6 @@ function HomepageHeader() {
             Install
           </Link>
         </div>
-        <small>Currently in <span style={{textDecoration: "underline"}}>alpha</span></small>
       </div>                
     </header>               
   );                       
@@ -138,6 +138,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
         <ExampleCode></ExampleCode>
+        <Why />
         <Contribute />
         <Roadmap />
       </main>

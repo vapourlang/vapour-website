@@ -49,6 +49,14 @@ const config = {
 
   themeConfig:
     ({
+      announcementBar: {
+        id: 'alpha',
+        content:
+          'Vapour is currently in <strong>very early alpha</strong>!',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
