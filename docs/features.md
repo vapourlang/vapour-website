@@ -117,7 +117,9 @@ func add(x: int): int {
 }
 ```
 
-## Generic
+## Decorators
+
+### Generic
 
 Vapour lets you define a generic with a decorator.
 
@@ -141,7 +143,7 @@ my_method <- function(x, ...) {
 </TabItem>
 </Tabs>
 
-## Default
+### Default
 
 Vapour lets you define a default method with a decorator.
 
@@ -162,6 +164,38 @@ func (x: any) my_method(...: any): any {
 my_method.default <- function(x, ...) {
   stop("Not implemented")
 }
+```
+
+</TabItem>
+</Tabs>
+
+### Matrix
+
+You can customise how matrices are created with `@matrix`,
+this is making the type very strict.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+@matrix(nrow = 2, ncol = 2)
+type mat: matrix { int }
+
+mat(1..4)
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+structure(
+  matrix(
+    1:4,
+    nrow = 2,
+    ncol = 2
+  ),
+  class = c("mat", "matrix")
+)
 ```
 
 </TabItem>

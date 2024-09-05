@@ -258,6 +258,34 @@ john = structure(
 </TabItem>
 </Tabs>
 
+#### Matrices
+
+The `matrix` type creates a `matrix`, it expects a single type.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+type mat: matrix { num }
+
+let x = matrix(1..10)
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = structure(
+  matrix(
+    1:10,
+  ),
+  class = c("mat", "matrix")
+)
+```
+
+</TabItem>
+</Tabs>
+
 #### Implied lists
 
 You can define lists of objects by preceding your type with `[]`.
