@@ -14,10 +14,10 @@ Vectors:
 - `num` - numeric
 - `char` - character
 - `factor` - factor
-- `bool` - bool
+- `bool` - logical
 - `any` - any
-- `na` - any
-- `null` - null
+- `na` - NA
+- `null` - NULL
 
 Objects:
 - `dataframe` - data.frame
