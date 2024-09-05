@@ -10,3 +10,10 @@
   margin-top: 3rem;
   padding: 1rem;
 }
+
+.svg {
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  color: var(--ifm-color-primary);
+}

@@ -13,7 +13,6 @@ Vectors:
 - `int` - integer
 - `num` - numeric
 - `char` - character
-- `factor` - factor
 - `bool` - logical
 - `any` - any
 - `na` - NA

@@ -59,7 +59,7 @@ const config = {
       },
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       image: "img/vapour-social.png",
