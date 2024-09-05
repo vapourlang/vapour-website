@@ -10,6 +10,7 @@ import { Highlight, themes} from "prism-react-renderer"
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Why from '../components/Why';
+import Admonition from '@theme/Admonition';
 
 import styles from './index.module.css';
 
@@ -31,6 +32,12 @@ function HomepageHeader() {
             to="/install">
             Install
           </Link>
+        </div>
+        <div style={{marginTop: "4rem"}}>
+          <Admonition type="warning" title="Early alpha">
+            <p>Vapour is in extremely young, the syntax might change, things will break, expect bugs.</p>
+            <p>But please help the language mature 🙂</p>
+          </Admonition>
         </div>
       </div>                
     </header>               
