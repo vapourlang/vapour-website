@@ -35,7 +35,7 @@ function HomepageHeader() {
         </div>
         <div style={{marginTop: "4rem"}}>
           <Admonition type="warning" title="Early alpha">
-            <p>Vapour is in extremely young, the syntax might change, things will break, expect bugs.</p>
+            <p>Vapour is extremely young, the syntax might change, things will break, expect bugs.</p>
             <p>But please help the language mature 🙂</p>
           </Admonition>
         </div>
