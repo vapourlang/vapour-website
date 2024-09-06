@@ -1,0 +1,31 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.feature {
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  margin: .5rem;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.feature:hover {
+  border-color: var(--ifm-color-primary-dark);
+  color: var(--ifm-background-color);
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.feature:hover .featureLink{
+  color: var(--ifm-background-color);
+  font-weight: bold;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}

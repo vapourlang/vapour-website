@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Contribute from '@site/src/components/Contribute';
 import Roadmap from '@site/src/components/Roadmap';
 import '@site/src/vapour.js'
@@ -13,6 +12,7 @@ import Why from '../components/Why';
 import Admonition from '@theme/Admonition';
 
 import styles from './index.module.css';
+import Setup from '../components/Setup';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -143,9 +143,9 @@ export default function Home() {
       description="Write more robust R code">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
-        <ExampleCode></ExampleCode>
         <Why />
+        <ExampleCode></ExampleCode>
+        <Setup />
         <Contribute />
         <Roadmap />
       </main>
