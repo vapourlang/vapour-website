@@ -10,7 +10,7 @@ First, [install](/install) the language, it's available for:
 - Mac
 - Windows
 
-Grab the latest release from [github](https://github.com/vapourlang/vapour/releases)
+Grab the latest release from [here](/install).
 
 ## Setup your editor
 
