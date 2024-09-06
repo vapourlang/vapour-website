@@ -5,3 +5,8 @@
   text-align: center;
 }
 
+.svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--ifm-color-primary);
+}
