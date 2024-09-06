@@ -24,6 +24,7 @@ Objects:
 - `list` - list
 - `struct` - structure
 - `object` - named list 
+- `factor` - factor
 - `func` - function
 
 :::info
@@ -268,7 +269,7 @@ The `matrix` type creates a `matrix`, it expects a single type.
 ```vapour
 type mat: matrix { num }
 
-let x = matrix(1..10)
+let x = mat(1..10)
 ```
 
 </TabItem>
@@ -280,6 +281,34 @@ x = structure(
     1:10,
   ),
   class = c("mat", "matrix")
+)
+```
+
+</TabItem>
+</Tabs>
+
+#### Factor 
+
+The `factor` type creates a `factor`, it expects a single type.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+type fct: factor { char }
+
+let x = fct(("a", "a", "b"))
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+x = structure(
+  factor(
+    c("a", "a", "b"),
+  ),
+  class = c("fct", "factor")
 )
 ```
 
