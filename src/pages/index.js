@@ -27,11 +27,6 @@ function HomepageHeader() {
             to="/get-started">
             Get Started
           </Link>
-          <Link
-            className={clsx("button button--secondary button--lg", styles.white)}
-            to="/install">
-            Install
-          </Link>
         </div>
         <div style={{marginTop: "4rem"}}>
           <Admonition type="warning" title="Early alpha">
