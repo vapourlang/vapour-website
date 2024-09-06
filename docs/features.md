@@ -200,3 +200,34 @@ structure(
 
 </TabItem>
 </Tabs>
+
+### Factor 
+
+You can customise how factors are created with `@factor`,
+this is making the type very strict.
+
+<Tabs>
+<TabItem value="vp" label="Vapour">
+
+```vapour
+@factor(levels = ("a", "b"))
+type fct: matrix { char }
+
+fct(("a", "b", "a"))
+```
+
+</TabItem>
+<TabItem value="r" label="R">
+
+```r
+structure(
+  factor(
+    c("a", "b", "a")
+    levels = c("a", "b", "c")
+  ),
+  class = c("fct", "matrix")
+)
+```
+
+</TabItem>
+</Tabs>
