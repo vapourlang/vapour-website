@@ -1,0 +1,169 @@
+---
+title: Vapour Alpha Release
+description: Initial release of Vapour!
+slug: vapour-release
+authors:
+  - name: John Coene
+    title: Creator of Vapour
+    url: https://john-coene.com
+    image_url: https://github.com/JohnCoene.png
+    socials:
+      x: jdatap 
+      github: JohnCoene 
+tags: [release]
+image: https://i.imgur.com/mErPwqL.png
+hide_table_of_contents: false
+---
+
+# Hello, world!
+
+At long last, I'm releasing Vapour!
+
+<!-- truncate -->
+
+## The story so far
+
+I've been thinking about such a project for at least 4 years now,
+since trying typed languages such as [Typescript](https://www.typescriptlang.org/),
+[Go](https://go.dev/), and others.
+
+Three years ago, I shared this idea with [Kirill Müller](https://github.com/krlmlr)
+and it lead to [pre-processing R](https://github.com/pre-processing-r) and 
+an ISC submission for a grant with other
+[R community members](https://github.com/orgs/pre-processing-r/people).
+
+We did not obtain the grant and this project died down, but it could not
+leave my mind, I have since kept trying to put something together but ran into
+many hurdles. mostly technical (skill issues), until now... I hope.
+
+## Build Step
+
+In my opinion, what is probably even more valuable than types is the "build step."
+The distinction between the code written by the programmer from the code that runs
+implies a "pre-processor." In the case of Go, or Rust it's a compiler, for 
+Typescript and Vapour it's a _transpiler_.
+
+This step allows the transpiler to perform a number of things
+(not all are yet available in Vapour):
+
+- Tree-shaking: mainly done in Typescript/Javascript where the preprocessor
+can remove unused variables, and more from the code to make the resulting
+code lighter.
+- Performances: the pre-processor can perform optimisations to output more efficient code.
+- Syntax: the transpiler can ingest one version of a syntax and output another.
+- Static analysis: the pre-processor can analyse the written code and flag errors.
+- many more things...
+
+I always thought that the R programming language could benefit from all of the above.
+
+## Frustrations
+
+My "native" programming language is R, I certainly don't consider myself a good
+R programmer but I've used the language for just over a decade now so I can still
+claim to be quite at ease with it.
+
+And yet...
+
+I often get caught by ~stupid~ errors.
+Oftentimes the errors in my caught are glaring, see the exaggeration below.
+
+```r
+x <- "hello"
+
+print(x + 1)
+```
+
+When I see such errors I always think: "Why did you let me run that?"
+The error is so glaring that the language should warn me of the issue
+_at the time I write the code._
+The language should be able to warn me of such ~stupid~ mistakes,
+not the users of my applications or packages.
+
+This probably applies to all dynamically typed languages, though
+Javascript bundlers sometimes catch such problems.
+However, R sometimes exacerbate the issue as it can have rather
+cryptic error messages that, for goodness sake, refuse to tell the 
+developer where the error occured: give me a file name and line number!
+
+```r
+if(NA){
+  print("this will error")
+}
+```
+
+The above error genuinely does not give any indication as to the location
+of the error, even with `options(error = traceback)`. 
+I've have already spent too many afternoons trying to identify the offending
+`if` statement in large codebases.
+
+We should not have to advocate for `if(isTRUE(NA)){}`, it's a failure of the 
+language which sometimes seems to work again the developers rather than
+attempt to help them.
+
+Types do away with that, because the language can check for it, such 
+checks also remove the infamous `object of type closure is not subsettable` error.
+
+## Syntax
+
+Another fascinating idea enabled by pre-processors is the idea of multiple
+syntaxes. R's syntax is very stable, 99% of the code written in R version 2+
+still runs fine on version 4+. Certainly that's a good thing!
+
+I'm not entirely sure this is a positive.
+We should differentiate between syntax and language.
+Almost all languages make the distinction: English is one language but
+there are multiple syntaxes for it (British, American, Indian, etc.),
+the same applies to Spanish, Portuguese, French, and many more.
+
+Javascript has such a concept, though the point is not to have various
+dialects of the language but to allow the syntax of the language to
+move faster than the language.
+
+Javascript is the engine, ECMAScript is the syntax.
+Part of the work JavaScript bundlers do (webpack, rollup, parcel, etc.),
+is to change the syntax of the written JavaScript code to older versions
+(which are supported by more browsers).
+
+We could imagine something similar with Vapour/R, we could have had the
+pipe (`|>`) years ago and have the transpiler convert it back to 
+magrittr's `%>%`. You could even imagine R having macros for instance!
+
+## Refactoring
+
+TLDR; try Go, it'll change your life.
+
+With all of the above mentioned improvements one discovers refactoring.
+
+> I'm very confident of the statements that follow, I have seen developers
+far more skilled and experienced than I am approach the problem in the same
+manner, it's not a skill issue, it's caused by the language.
+
+In dynamically typed languages like R we approach refactoring from the
+outside in: we see a piece of code at the core of the project that needs
+some serious refactoring but we don't dare.
+Instead of going straight to the piece of code in question we nibble on the
+edges, approaching the problem from the outside because doing it the other
+way around (the correct way) is bound to lead to errors.
+
+As a result we approach refactoring in steps that are inefficient, and need
+to be done in iteration as a complete refactor can never truly be achieved this way,
+and if when you are finally done with your "refactoring" you pray to your God
+that the tests you have not written pass...
+
+In a strongly typed language like Go you approach the problem the other way around:
+you see something you don't like and you just rip it out.
+When you do that your editor will light up like a Christmas tree highlighting all
+the things that broke, and you simply go on with your refactoring going from 
+one diagnostic to the next. As a result refactoring becomes exciting, and fun 
+rather than a chore you're afraid to tackle.
+
+Why ramble abour refactoring?
+
+If you add up all the time you have spent writing code and compare
+it against the amount time you have spent glancing, reading, analysing, and
+refactoring or fixing bugs you will notice that the we spend very little
+time "writing" code: refactoring is what we do most of the time.
+
+## Conclusion
+
+Try Vapour?

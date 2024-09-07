@@ -52,7 +52,7 @@ const config = {
       announcementBar: {
         id: 'alpha',
         content:
-          'Vapour is currently in <strong>very early alpha</strong>!',
+          'Vapour is currently in very early alpha, <strong><a href="/install">download it</a></strong> anyway!',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: true,
@@ -85,6 +85,7 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {to: 'blog', label: 'Blog', position: 'left'}
         ],
       },
       footer: {

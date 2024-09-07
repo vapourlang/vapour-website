@@ -31,7 +31,7 @@ way in which it differs [here](/docs/syntax).
 
 Vapour's extension is `.vp`, create your first script.
 
-```r
+```vapour
 func hello(what: char): char {
   return sprintf("Hello, %s", what)
 }

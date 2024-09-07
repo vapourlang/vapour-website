@@ -9,7 +9,8 @@ import TabItem from '@theme/TabItem';
 
 ## Built-in Types
 
-Vectors:
+__Vectors:__
+
 - `int` - integer
 - `num` - numeric
 - `char` - character
@@ -18,7 +19,8 @@ Vectors:
 - `na` - NA
 - `null` - NULL
 
-Objects:
+__Objects:__
+
 - `dataframe` - data.frame
 - `matrix` - matrix
 - `list` - list

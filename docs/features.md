@@ -223,7 +223,7 @@ fct(("a", "b", "a"))
 structure(
   factor(
     c("a", "b", "a")
-    levels = c("a", "b", "c")
+    levels = c("a", "b")
   ),
   class = c("fct", "matrix")
 )

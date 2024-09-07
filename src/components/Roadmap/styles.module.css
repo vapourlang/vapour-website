@@ -18,3 +18,10 @@
   color: var(--ifm-background-color);
   background-color: var(--ifm-color-primary-dark);
 }
+
+.svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--ifm-color-primary);
+  float: right;
+}
