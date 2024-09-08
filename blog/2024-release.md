@@ -169,4 +169,9 @@ time "writing" code: refactoring (re-writing) is what we do most of the time.
 
 ## Conclusion
 
-Try Vapour?
+Vapour aims at tackling these issues.
+It's admittedly very young and thus may not do a perfect job of it but
+we'll work things out to mature the language and ecosystem.
+
+If you have any feedback, questions, or concern, please open Github
+issues, all are welcome to do so.

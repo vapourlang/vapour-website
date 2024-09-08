@@ -51,7 +51,7 @@ function ExampleCode() {
    }                        
                            
   @generic                  
-  func (p: any) set_age(... : any): null
+  func (p: any) set_age(age: int, ...: any): any
 
   @default                  
   func(p: any) set_age(age: int): null {
