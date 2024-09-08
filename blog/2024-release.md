@@ -36,6 +36,8 @@ We did not obtain the grant and that project died down, but it could not
 leave my mind, I have since kept trying to put something together but ran into
 many hurdles. mostly technical (skill issues), until now... I hope.
 
+> Note that the following purposely simplifies many concepts.
+
 ## Build Step
 
 In my opinion, what is probably even more valuable than types is the "build step."
@@ -43,18 +45,24 @@ The distinction between the code written by the programmer from the code that ru
 implies a "pre-processor." In the case of Go, or Rust it's a compiler, for 
 Typescript and Vapour it's a _transpiler_.
 
-This step allows the transpiler to perform a number of things
-(not all are yet available in Vapour):
+The pre-processor can carry a number of tasks to help the developer,
+the main one being static analysis: analysing the code without executing it.
+This is what allows spotting issues in the code before execution.
 
-- Tree-shaking: mainly done in Typescript/Javascript where the preprocessor
-can remove unused variables, and more from the code to make the resulting
-code lighter.
-- Performances: the pre-processor can perform optimisations to output more efficient code.
-- Syntax: the transpiler can ingest one version of a syntax and output another.
-- Static analysis: the pre-processor can analyse the written code and flag errors.
-- many more things...
+For instance, Vapour will warn that the code below may error as `x`
+might be missing.
 
-I always thought that the R programming language could benefit from all of the above.
+```vapour
+func add_one(x: int): int {
+  return x + 1
+}
+```
+
+You can then resolve that warning by either checking whether that variable is 
+missing with `missing` or give it a default value.
+
+Vapour's pre-processor allows such checks, along with many others, and we
+hope to add many more.
 
 ## Frustrations
 
@@ -121,7 +129,10 @@ dialects of the language but to allow the syntax of the language to
 move faster than the language.
 
 Javascript is the engine, ECMAScript is the syntax.
-Part of the work JavaScript bundlers do (webpack, rollup, parcel, etc.),
+Part of the work JavaScript bundlers do (
+[webpack](https://webpack.js.org/), 
+[rollup](https://rollupjs.org/), 
+[parcel](https://parceljs.org/), etc.),
 is to change the syntax of the written JavaScript code to older versions
 (which are supported by more browsers).
 

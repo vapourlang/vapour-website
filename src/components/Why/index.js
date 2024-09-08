@@ -33,7 +33,7 @@ const items = [
         <Heading as="h2">Syntax</Heading>
         <p>
           A language that transpiles to R means we can leverage the existing
-          R body of work but improve things in places by having the syntax
+          R body of work but improve things in some places by having the syntax
           change faster than the underlying language, akin to the various
           ECMAScript for JavaScript.
         </p>
@@ -74,8 +74,8 @@ const items = [
         </p>
         <p>
           Vapour can check for flagrant problems in the code at the time 
-          your write it, letting fix them before they reach your users or even
-          tests.
+          your write it, letting you fix them before they reach your users or even
+          your unit tests.
         </p>
       </>
     ),
