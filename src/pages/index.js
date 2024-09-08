@@ -13,6 +13,7 @@ import Admonition from '@theme/Admonition';
 
 import styles from './index.module.css';
 import Setup from '../components/Setup';
+import Intro from '../components/Intro';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -138,6 +139,7 @@ export default function Home() {
       description="Write more robust R code">
       <HomepageHeader />
       <main>
+        <Intro />
         <Why />
         <ExampleCode></ExampleCode>
         <Setup />

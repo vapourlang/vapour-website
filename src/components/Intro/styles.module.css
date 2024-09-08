@@ -1,0 +1,19 @@
+.items {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.item {
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  margin: .5rem;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.svg {
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  color: var(--ifm-color-primary);
+}

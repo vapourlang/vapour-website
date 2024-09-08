@@ -30,7 +30,7 @@ Plug 'vapourlang/vapour-nvim'
 
 ## Vscode
 
-Install the [extension](https://github.com/vapourlang/vapour-vscode) 
+Install the [extension](https://marketplace.visualstudio.com/items?itemName=Vapour.vapour-vscode) 
 to get syntax highlighting as well as LSP diagnostics.
 
 ## Customise
