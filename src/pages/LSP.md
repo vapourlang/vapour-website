@@ -58,7 +58,7 @@ You can remove any of these to disable that behaviour,
 e.g.: you can remove `change` to not have the LSP interrupt
 you as you write code.
 
-## Severity
+### Severity
 
 Customise what errors are displayed:
 
@@ -66,3 +66,5 @@ Customise what errors are displayed:
 - `warn`: severe warnings that result in the code not being transpiled to R
 - `hint`: hints to improve code
 - `info`: informational messages
+
+Remove a severity to not have messages of that severity shown in your editor.

@@ -3,6 +3,9 @@
 Vapour is still in its very early stages, contributing is probably
 not easy but certainly welcome, thank you for even considering it!
 
+This document only meant to guide anyone who would want to contribute,
+it gives an overview of how the project is structured.
+
 ## Internals
 
 This is just briefly going over the internals as it may help you contribute.
@@ -47,9 +50,9 @@ consistency, variable usage, etc.
 
 The walker emits:
 
-- info
-- warnings
 - errors (fatal)
+- warnings
+- info
 - hints
 
 These follow the LSP standards where they are resurfaced.
