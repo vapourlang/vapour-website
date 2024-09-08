@@ -32,7 +32,7 @@ and it lead to [pre-processing R](https://github.com/pre-processing-r) and
 an ISC submission for a grant with other
 [R community members](https://github.com/orgs/pre-processing-r/people).
 
-We did not obtain the grant and this project died down, but it could not
+We did not obtain the grant and that project died down, but it could not
 leave my mind, I have since kept trying to put something together but ran into
 many hurdles. mostly technical (skill issues), until now... I hope.
 
@@ -64,24 +64,22 @@ claim to be quite at ease with it.
 
 And yet...
 
-I often get caught by ~stupid~ errors.
-Oftentimes the errors in my caught are glaring, see the exaggeration below.
+I still frequently get make stupid mistakes.
+Oftentimes these in caught are glaring, see the exaggeration below.
 
 ```r
 x <- "hello"
 
-print(x + 1)
+x + 1
 ```
 
-When I see such errors I always think: "Why did you let me run that?"
-The error is so glaring that the language should warn me of the issue
-_at the time I write the code._
-The language should be able to warn me of such ~stupid~ mistakes,
+When I see such errors I always think: "Why did you even let me run that?"
+The language should warn me of such ~stupid~ mistakes,
 not the users of my applications or packages.
 
 This probably applies to all dynamically typed languages, though
 Javascript bundlers sometimes catch such problems.
-However, R sometimes exacerbate the issue as it can have rather
+However, R sometimes exacerbates the issue as it can have rather
 cryptic error messages that, for goodness sake, refuse to tell the 
 developer where the error occured: give me a file name and line number!
 
@@ -101,7 +99,11 @@ language which sometimes seems to work again the developers rather than
 attempt to help them.
 
 Types do away with that, because the language can check for it, such 
-checks also remove the infamous `object of type closure is not subsettable` error.
+checks also remove the infamous `object of type closure is not subsettable` error,
+and many more.
+Also a new language allows a custom tree-walker to check for issues
+at the time we write the code so any potential problem can be fixed before
+the code is run.
 
 ## Syntax
 
@@ -124,13 +126,13 @@ Part of the work JavaScript bundlers do (webpack, rollup, parcel, etc.),
 is to change the syntax of the written JavaScript code to older versions
 (which are supported by more browsers).
 
-We could imagine something similar with Vapour/R, we could have had the
+We could imagine something similar with Vapour/R; we could have had the
 pipe (`|>`) years ago and have the transpiler convert it back to 
-magrittr's `%>%`. You could even imagine R having macros for instance!
+magrittr's `%>%`.
 
 ## Refactoring
 
-TLDR; try Go, it'll change your life.
+TLDR; try [Go](https://go.dev), it'll change your life.
 
 With all of the above mentioned improvements one discovers refactoring.
 
@@ -140,29 +142,31 @@ manner, it's not a skill issue, it's caused by the language.
 
 In dynamically typed languages like R we approach refactoring from the
 outside in: we see a piece of code at the core of the project that needs
-some serious refactoring but we don't dare.
+some serious refactoring but no one dares touch it.
 Instead of going straight to the piece of code in question we nibble on the
 edges, approaching the problem from the outside because doing it the other
 way around (the correct way) is bound to lead to errors.
 
-As a result we approach refactoring in steps that are inefficient, and need
-to be done in iteration as a complete refactor can never truly be achieved this way,
-and if when you are finally done with your "refactoring" you pray to your God
-that the tests you have not written pass...
+As a result we approach refactoring in steps that are inefficient, stressful,
+and need to be carried iteratively as a complete refactor can never truly 
+be achieved this way, and at every lengthy iteration we hope 
+that the tests we have not written pass...
 
-In a strongly typed language like Go you approach the problem the other way around:
+In a strongly typed language like Go the developer approaches the problem 
+the other way around:
 you see something you don't like and you just rip it out.
-When you do that your editor will light up like a Christmas tree highlighting all
-the things that broke, and you simply go on with your refactoring going from 
-one diagnostic to the next. As a result refactoring becomes exciting, and fun 
-rather than a chore you're afraid to tackle.
+The editor will then light up like a Christmas tree highlighting all
+the things that broken, and we can simply start refactoring; going from 
+one diagnostic to the next until all is well again.
+As a result refactoring becomes exciting, and fun 
+rather than a chore to worry about.
 
 Why ramble abour refactoring?
 
 If you add up all the time you have spent writing code and compare
 it against the amount time you have spent glancing, reading, analysing, and
-refactoring or fixing bugs you will notice that the we spend very little
-time "writing" code: refactoring is what we do most of the time.
+refactoring or fixing bugs you will notice that we spend very little
+time "writing" code: refactoring (re-writing) is what we do most of the time.
 
 ## Conclusion
 

@@ -1,17 +1,22 @@
 # Callbacks
 
-You can of course use callbacks in Vapourm but you can make
+You can of course use callbacks in Vapour but you can make
 them more robust by setting custom types for callbacks
 so that functions that accept callbacks will check for the
 signature of callbacks passed to them.
 
-> This is a silly example as these functions are already vectorised.
+:::note
+
+This is the only place in Vapour where types are not
+preceded by a colon `:`
+
+:::
 
 We can thus define a type for a function signature below:
 it expects an `int` as argument and must return an `int`
 
 ```vapour
-type math: func(x: int): int
+type math: func(int, int) int
 ```
 
 With the type define we can reference that type in other
@@ -21,20 +26,20 @@ This ensures that we only pass functions that corresponds
 to our predefined expectations.
 
 ```vapour
-func vectorise_math(vector: int, cb: math): int {
-  return sapply(vector, cb)
+func vectorise_math(x: int, y: int, cb: math): int {
+  return cb(x, y)
 }
 ```
 
 We can then use the function defined above
 
 ```vapour
-vectorise_math((1, 2, 3), (x: int): int => {
-  return x * 3
+vectorise_math(1, 2, (x: int, y: int): int => {
+  return x * y
 })
 
-vectorise_math((1, 2, 3), (x: int): int => {
-  return x + 4
+vectorise_math(1, 2, (x: int, y: int): int => {
+  return x + y
 })
 ```
 
@@ -45,7 +50,7 @@ instead of an `int`.
 
 ```vapour
 # will fail, callback is of the wrong signature.
-vectorise_math((1, 2, 3), (x: int): num => {
+vectorise_math(1, 2, (x: int): num => {
   return x / 2
 })
 ```
