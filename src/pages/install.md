@@ -9,12 +9,25 @@ import TabItem from '@theme/TabItem';
 
 Install the CLI in any way you prefer.
 
+## Go
+
+If you have go installed you can just run.
+
+```bash
+go install vapourlang/vapour
+```
+
 ## Download
+
+### Linux
 
 Prebuilt binaries.
 
 <Tabs>
 <TabItem value="linux" label="Linux">
+
+See the [latest release](https://github.com/vapourlang/vapour/releases/latest) for 
+`.deb`, `.rpm`, `.apk`, `.ipk`, and Archlinux packages.
 
 - [x86](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_x86_64.tar.gz)
 - [arm64](https://github.com/vapourlang/vapour/releases/latest/download/vapour_Linux_arm64.tar.gz)
@@ -42,12 +55,3 @@ Unzip and install the `.exe`
 
 </TabItem>
 </Tabs>
-
-## Go
-
-If you have go installed you can just run.
-
-```bash
-go install vapourlang/vapour
-```
-
