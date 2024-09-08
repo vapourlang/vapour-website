@@ -59,13 +59,12 @@ I always thought that the R programming language could benefit from all of the a
 ## Frustrations
 
 My "native" programming language is R, I certainly don't consider myself a good
-R programmer but I've used the language for just over a decade now so I can still
+R programmer but I've used the language for just over a decade now so I can
 claim to be quite at ease with it.
 
 And yet...
 
-I still frequently get make stupid mistakes.
-Oftentimes these in caught are glaring, see the exaggeration below.
+I still frequently make stupid mistakes, see the exaggeration below.
 
 ```r
 x <- "hello"
@@ -74,7 +73,7 @@ x + 1
 ```
 
 When I see such errors I always think: "Why did you even let me run that?"
-The language should warn me of such ~stupid~ mistakes,
+The language should warn me of such problems in my code,
 not the users of my applications or packages.
 
 This probably applies to all dynamically typed languages, though
@@ -89,9 +88,9 @@ if(NA){
 }
 ```
 
-The above error genuinely does not give any indication as to the location
-of the error, even with `options(error = traceback)`. 
-I've have already spent too many afternoons trying to identify the offending
+The above produces an error that genuinely does not give any indication as to the location
+of it in the source code, even with `options(error = traceback)`. 
+I have already spent too many afternoons trying to identify the offending
 `if` statement in large codebases.
 
 We should not have to advocate for `if(isTRUE(NA)){}`, it's a failure of the 
@@ -101,7 +100,7 @@ attempt to help them.
 Types do away with that, because the language can check for it, such 
 checks also remove the infamous `object of type closure is not subsettable` error,
 and many more.
-Also a new language allows a custom tree-walker to check for issues
+Also, a new language allows a custom tree-walker to check for issues
 at the time we write the code so any potential problem can be fixed before
 the code is run.
 

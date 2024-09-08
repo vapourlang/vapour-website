@@ -108,7 +108,7 @@ const items = [
       <>
         <Heading as="h2">Types</Heading>
         <p>
-          With the rise of dynamically typed programming languages 
+          With the rise of dynamically typed programming languages,
           developers have found out that, it turns out,
           types were not just to help the compiler, they actually
           help the developer just as much.
