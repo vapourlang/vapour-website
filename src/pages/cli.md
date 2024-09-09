@@ -80,8 +80,6 @@ to&mdash;not transpile the file&mdash;and instead run them in R directly
 (not generating the transpiled R code).
 
 ```bash
-vapour -indir=vp -run-only
-
 vapour -infile=script.vp -run-only
 ```
 
