@@ -20,14 +20,19 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #d7befe;
+  --ifm-color-primary: #f3f3f3;
   --ifm-color-primary-dark: #bc92fd;
   --ifm-color-primary-darker: #af7cfd;
   --ifm-color-primary-darkest: #863bfc;
   --ifm-color-primary-light: #f2eaff;
   --ifm-color-primary-lighter: #ffffff;
   --ifm-color-primary-lightest: #ffffff;
-  --ifm-background-color: #211533;
+  --ifm-background-color: #211533 !important;
+  --ifm-navbar-background-color: #1b102a !important;
   --ifm-navbar-search-input-background-color: #f3f3f3;
   --ifm-hero-background-color: #8358c3;
+
+  .footer, pre {
+    background-color: #1b102a !important;
+  }
 }
