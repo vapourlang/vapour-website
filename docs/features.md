@@ -49,6 +49,22 @@ type userid: int
 
 # will fail, type userid is already defined
 type userid: num
+
+let x: userid = 1.1
+# will fail, cannot use access operator on num
+x$inaccessible = 1
+
+type person: struct {
+  name: char
+}
+
+let p: person = person()
+
+# will fail, no x attribute on person
+print(p$x)
+
+# will fail, name is of wrong type
+p$x = 2
 ```
 
 ## Constants
@@ -231,3 +247,4 @@ structure(
 
 </TabItem>
 </Tabs>
+

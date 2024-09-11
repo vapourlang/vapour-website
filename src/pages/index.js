@@ -14,6 +14,7 @@ import Admonition from '@theme/Admonition';
 import styles from './index.module.css';
 import Setup from '../components/Setup';
 import Intro from '../components/Intro';
+import { vapour } from '../theme';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -95,7 +96,7 @@ function ExampleCode() {
   <section className="container" style={{marginTop: "0rem"}}>
     <Tabs>
       <TabItem value="vp" label="Vapour">
-        <Highlight code={code} language="vapour" theme={themes.dracula}>
+        <Highlight code={code} language="vapour" theme={vapour}>
          {({ style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
             {tokens.map((line, i) => (
@@ -111,7 +112,7 @@ function ExampleCode() {
         </Highlight>
       </TabItem>
       <TabItem value="r" label="R">
-        <Highlight code={coder} language="r" theme={themes.dracula}>
+        <Highlight code={coder} language="r" theme={vapour}>
          {({ style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
             {tokens.map((line, i) => (

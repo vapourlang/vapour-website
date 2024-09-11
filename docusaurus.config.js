@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import { vapour } from "./src/theme";
 
 const config = {
   title: "Vapour",
@@ -132,7 +133,14 @@ const config = {
       prism: {
         additionalLanguages: ["r", "vapour", "json"],
         theme: prismThemes.oneLight,
-        darkTheme: prismThemes.dracula,
+        darkTheme: vapour,
+        magicComments: [
+          {
+            className: 'theme-code-block-highlighted-line',
+            line: 'highlight-next-line',
+            block: {start: 'highlight-start', end: 'highlight-end'},
+          }
+        ]
       },
     }),
   plugins: [require.resolve("docusaurus-lunr-search")],

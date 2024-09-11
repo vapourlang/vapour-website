@@ -17,8 +17,8 @@ Grab the latest release from [here](/install).
 There are plugins for:
 
 - [Vscode](https://github.com/vapourlang/vapour-vscode)
-- [Neovim](https://github.com:vapourlang/vapour-nvim)
-- [Vim](https://github.com:vapourlang/vapour-vim)
+- [Neovim](https://github.com/vapourlang/vapour-nvim)
+- [Vim](https://github.com/vapourlang/vapour-vim)
 
 The plugins will provide syntax highlighting as well as the LSP.
 

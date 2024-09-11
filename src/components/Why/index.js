@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import { Highlight, themes} from "prism-react-renderer"
 import styles from './styles.module.css';
+import { vapour } from '../../theme';
 
 const syntaxCode = ` let x: int = 1
 
@@ -41,7 +42,7 @@ const items = [
     ),
     right: (
       <>
-        <Highlight code={syntaxCode} language="vapour" theme={themes.dracula}>
+        <Highlight code={syntaxCode} language="vapour" theme={vapour}>
          {({ style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
             {tokens.map((line, i) => (
@@ -81,7 +82,7 @@ const items = [
     ),
     right: (
       <>
-        <Highlight code={robustCode} language="vapour" theme={themes.dracula}>
+        <Highlight code={robustCode} language="vapour" theme={vapour}>
          {({ style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
             {tokens.map((line, i) => (
@@ -121,7 +122,7 @@ const items = [
     ),
     right: (
       <>
-        <Highlight code={typesCode} language="vapour" theme={themes.dracula}>
+        <Highlight code={typesCode} language="vapour" theme={vapour}>
          {({ style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style}>
             {tokens.map((line, i) => (

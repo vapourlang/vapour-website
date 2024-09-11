@@ -15,6 +15,9 @@ __Vectors:__
 - `num` - numeric
 - `char` - character
 - `bool` - logical
+- `date` - date 
+- `posixct` - date 
+- `posixlt` - date 
 - `any` - any
 - `na` - NA
 - `null` - NULL
