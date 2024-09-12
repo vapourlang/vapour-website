@@ -40,7 +40,7 @@ home directory.
 
 ```js
 {
-  lsp: {
+  "lsp": {
       "when": ["open", "save", "close", "change"],
       "severity": ["fatal", "warn", "hint, "info"]
     }
