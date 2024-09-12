@@ -1,4 +1,4 @@
-# LSP
+# Editor
 
 The language server protocol can be launched with `vapour -lsp`.
 Note that the LSP only runs on save (live diagnostics are obnoxious).
