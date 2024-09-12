@@ -38,10 +38,12 @@ to get syntax highlighting as well as LSP diagnostics.
 You can customise the LSP by creating a `.vapour` file in your
 home directory.
 
-```json
+```js
 {
-  "when": ["open", "save", "close", "change"],
-  "severity": ["fatal", "warn", "hint, "info"]
+  lsp: {
+      "when": ["open", "save", "close", "change"],
+      "severity": ["fatal", "warn", "hint, "info"]
+    }
 }
 ```
 
