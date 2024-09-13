@@ -72,8 +72,8 @@ const config = {
         },
         items: [
           { to: "/install", label: "Install", position: "left" },
-          { to: "/cli", label: "CLI", position: "left" },
           { to: "/lsp", label: "Editor", position: "left" },
+          { to: "/cli", label: "CLI", position: "left" },
           { to: "/repl", label: "REPL", position: "left" },
           {
             type: "doc",

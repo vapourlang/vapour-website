@@ -45,7 +45,7 @@ Usage of vapour:
 ### Transpile Directory
 
 The example command below will transpile all `.vp` files from the `vp`
-directory (`indir` flag), and palce the resulting R code in the `R`
+directory (`indir` flag), and place the resulting R code in the `R`
 directory (`ourdir` flag which defaults to R)
 
 ```bash
@@ -68,9 +68,9 @@ You can use any of the commands above but add the `-check-only` flag
 to---not transpile the file---and instead just run the type checker.
 
 ```bash
-vapour -indir=vp -outdir=R -check-only
+vapour -indir=vp -check-only
 
-vapour -infile=script.vp -outfile=script.R -check-only
+vapour -infile=script.vp -check-only
 ```
 
 ### Run

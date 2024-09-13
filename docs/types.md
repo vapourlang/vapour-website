@@ -66,7 +66,7 @@ You can use any if you cannot know the actual type,
 let x: any = sum(1, 2, 3)
 ```
 
-## Multiple  
+## Multiple types
 
 An object can be one of multiple types, separate the types with `|`.
 

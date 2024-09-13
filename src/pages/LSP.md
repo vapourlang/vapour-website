@@ -20,7 +20,7 @@ Install the Vim integration to get syntax highlighting as well as LSP diagnostic
 Plug 'vapourlang/vapour-vim'
 ```
 
-## Neovim
+## Neovim (coming soon)
 
 Install the Neovim integration to get syntax highlighting as well as LSP diagnostics.
 

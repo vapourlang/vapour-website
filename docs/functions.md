@@ -21,7 +21,7 @@ the language uses to know what is returned by functions.
 ## Functions
 
 Functions are declared with the `func` keyword,
-we indicate the the types of each argument as well as the type 
+we indicate the types of each argument as well as the type 
 the function returns.
 
 <Tabs>

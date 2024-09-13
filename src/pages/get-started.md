@@ -39,14 +39,14 @@ func hello(what: char): char {
 hello("Vapour")
 ```
 
-With your first scipt written you are ready to run the Vapour code.
+With your first script written you are ready to run the Vapour code.
 
 ```bash
 vapour -infile=script.vp --run-only
 ```
 
 If you are happy with your code and wish to generate the corresponding R
-code rerun the above command, ommitting the `-run-only` flag.
+code rerun the above command, omitting the `-run-only` flag.
 
 ```bash
 vapour -infile=script.vp
