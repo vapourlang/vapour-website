@@ -5,6 +5,13 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+# Requirements
+
+The only requirement is to have the [R programming language](https://www.r-project.org/)
+installed on your machine.
+We currently call R during transpilation to check on some built-in R functions.
+We intend on removing this requirement in the long-term.
+
 # Install
 
 Install the CLI in any way you prefer.

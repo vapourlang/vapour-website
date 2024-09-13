@@ -88,7 +88,7 @@ This probably applies to all dynamically typed languages, though
 Javascript bundlers sometimes catch such problems.
 However, R sometimes exacerbates the issue as it can have rather
 cryptic error messages that, for goodness sake, refuse to tell the 
-developer where the error occured: give me a file name and line number!
+developer where the error occurred: give me a file name and line number!
 
 ```r
 if(NA){
@@ -171,7 +171,7 @@ one diagnostic to the next until all is well again.
 As a result refactoring becomes exciting, and fun 
 rather than a chore to worry about.
 
-Why ramble abour refactoring?
+Why ramble about refactoring?
 
 If you add up all the time you have spent writing code and compare
 it against the amount time you have spent glancing, reading, analysing, and
