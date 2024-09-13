@@ -14,6 +14,8 @@ You can get help with `vapour -h`
 Usage of vapour:
   -check-only
     	Run type checker
+  -devtools
+        Run {devtools} commands after transpilation, e.g.: -devtools=document,check
   -help
     	Get help on commands
   -indir string
