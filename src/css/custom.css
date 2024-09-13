@@ -31,8 +31,9 @@
   --ifm-navbar-background-color: #1b102a !important;
   --ifm-pre-background: #1b102a !important;
   --prism-background-color: #1b102a !important;
-  --ifm-footer-background-color:#1b102a !important;
+  --ifm-footer-background-color: #1b102a !important;
   --ifm-navbar-search-input-background-color: #f3f3f3;
   --ifm-hero-background-color: #1b102a;
   --docusaurus-highlighted-code-line-bg: #8358c3;
+  --ifm-link-color: #af7cfd;
 }
