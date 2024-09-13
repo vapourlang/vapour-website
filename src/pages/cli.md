@@ -102,6 +102,21 @@ You can serve it on a TCP server with:
 vapour -lsp -tcp -port=3000
 ```
 
+## Devtools
+
+There is a `devtools` argument for convinience, you can pass it
+a comma separated list of devtools function to run if the transpilation
+is successful.
+
+```bash
+vapour -infile=script.vp -devtools=document,check
+
+vapour -indir=vp -devtools=document,check,install
+```
+
+This is to reduce the repetitive rinse and repeat when building
+packages.
+
 ### Version
 
 Retrieve the current vapour version.

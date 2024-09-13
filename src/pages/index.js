@@ -12,9 +12,9 @@ import Why from '../components/Why';
 import Admonition from '@theme/Admonition';
 
 import styles from './index.module.css';
-import Setup from '../components/Setup';
 import Intro from '../components/Intro';
 import { vapour } from '../theme';
+import AsciinemaWidget from '../components/Cast';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -143,7 +143,6 @@ export default function Home() {
         <Intro />
         <Why />
         <ExampleCode></ExampleCode>
-        <Setup />
         <Contribute />
         <Roadmap />
       </main>
