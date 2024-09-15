@@ -1,6 +1,6 @@
-# Import and Export types
+# Import and Export
 
-How to export and import types from other packages.
+How to export and import types from other packages?
 
 ## Export
 
