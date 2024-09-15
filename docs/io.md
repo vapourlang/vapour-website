@@ -22,6 +22,10 @@ from other packages: using the namespace.
 
 ```vapour
 let x: aPkg::theType = aPkg::theType(x = 1)
+
+type custom: object {
+  this: aPkg::aType
+}
 ```
 
 Vapour will then perform the same standard checks as with your 
