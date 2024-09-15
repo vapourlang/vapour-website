@@ -24,7 +24,8 @@ const sidebars = {
        'types',
        'variables',
        'functions',
-       'packages'
+       'packages',
+       'io'
       ]
     },
     {
