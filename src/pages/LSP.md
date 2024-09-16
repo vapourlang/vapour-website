@@ -20,12 +20,17 @@ Install the Vim integration to get syntax highlighting as well as LSP diagnostic
 Plug 'vapourlang/vapour-vim'
 ```
 
-## Neovim (coming soon)
+## Neovim
 
 Install the Neovim integration to get syntax highlighting as well as LSP diagnostics.
 
 ```vim
-Plug 'vapourlang/vapour-nvim'
+{
+  "vapourlang/vapour-nvim",
+  config = function()
+    require("vapour").setup()
+  end
+}
 ```
 
 ## Vscode
@@ -36,7 +41,7 @@ to get syntax highlighting as well as LSP diagnostics.
 ## Customise
 
 You can customise the LSP by creating a `.vapour` file in your
-home directory.
+home directory (`~`).
 
 ```js
 {
@@ -69,4 +74,5 @@ Customise what errors are displayed:
 - `hint`: hints to improve code
 - `info`: informational messages
 
-Remove a severity to not have messages of that severity shown in your editor.
+Remove a severity to not have messages of that severity shown in your editor
+(not recommended).
