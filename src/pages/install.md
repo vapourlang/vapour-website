@@ -21,7 +21,7 @@ Install the CLI in any way you prefer.
 If you have go installed you can just run.
 
 ```bash
-go install vapourlang/vapour
+go install github.com/vapourlang/vapour@latest
 ```
 
 ## Download
