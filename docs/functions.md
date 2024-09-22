@@ -42,6 +42,38 @@ The way functions and methods are declared is taken from
 This is because the way methods are declared and dispatched in Go
 is very similar to R.
 
+## Return
+
+In Vapour `return` is a keyword rather than a function and is
+mandatory.
+Inplicitely returning the last the last line is confusing.
+
+Take for instance the function below, it's very hard for anyone
+to guess what it actually returns.
+
+```r
+foo <- function(){
+  x <- list()
+  x$name <- 2
+}
+```
+
+The above actually returns `2`.
+Confusion only increases when the function makes use of branching.
+
+```r
+foo <- function(x = FALSE){
+  x <- list()
+  if(!x) {
+    x$valid <- 1
+  } else {
+    x$valid <- "hello"
+  }
+}
+```
+
+Therefore, we make the `return` keyword mandatory in Vapour.
+
 ## Functions
 
 Functions are declared with the `func` keyword,
