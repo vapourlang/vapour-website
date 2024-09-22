@@ -33,7 +33,7 @@ __Objects:__
 
 :::info
 
-Infering types for base R and other packages is on the roadmap but likely
+Inferring types for base R and other packages is on the roadmap but likely
 will take quite some time to achieve.
 
 :::
