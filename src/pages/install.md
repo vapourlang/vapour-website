@@ -18,10 +18,15 @@ Install the CLI in any way you prefer.
 
 ## Go
 
-If you have go installed you can just run.
+If you have go installed you can install it directly from Github.
+
+Requirements:
+
+- Go >= 1.21.0
+- Your `GOPATH` added to your `PATH`
 
 ```bash
-go install github.com/vapourlang/vapour@latest
+go install github.com/vapourlang/vapour@v0.0.5
 ```
 
 ## Download
