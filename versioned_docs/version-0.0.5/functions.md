@@ -3,50 +3,13 @@ import TabItem from '@theme/TabItem';
 
 # Functions & Methods
 
-## Introduction
-
 In Vapour functions are declared much differently than they are in R,
 methods even more so.
 This is both to make it more readable and easier to parse, R has some
 oddities with how methods are declared.
 
-In R functions are declared like so:
-
-```r
-foo <- function(x) {
-  x + 1
-}
-```
-
-Whilst this works great for functions it becomes confusing
-when declaring methods, e.g.:
-
-```r
-foo.data.frame <- function(x) {}
-```
-
-In the above, it is actually impossible to tell whether we 
-are declaring:
-
-- A function called `foo.data.frame`
-- A method `foo` on `data.frame`
-- A method `foo.data` on `frame`
-
-Either method declarations should have been done differently, 
-or R should not have allowed `.` in function names, and other
-identifiers.
-
-Hence, Vapour changes the way functions and methods are declared.
 The way functions and methods are declared is taken from
 [Go](https://go.dev/).
-This is because the way methods are declared and dispatched in Go
-is very similar to R.
-
-## Functions
-
-Functions are declared with the `func` keyword,
-we indicate the types of each argument as well as the type 
-the function returns.
 
 :::info
 
@@ -54,6 +17,12 @@ In Vapour `return` is a keyword and is mandatory, this is what
 the language uses to know what is returned by functions.
 
 :::
+
+## Functions
+
+Functions are declared with the `func` keyword,
+we indicate the types of each argument as well as the type 
+the function returns.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">

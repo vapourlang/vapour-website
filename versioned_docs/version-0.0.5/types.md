@@ -16,9 +16,10 @@ __Vectors:__
 - `char` - character
 - `bool` - logical
 - `date` - date 
-- `posixct` - Posixct
-- `posixlt` - Posixlt
+- `posixct` - date 
+- `posixlt` - date 
 - `any` - any
+- `na` - NA
 - `null` - NULL
 
 __Objects:__
@@ -73,18 +74,16 @@ An object can be one of multiple types, separate the types with `|`.
 <TabItem value="vp" label="Vapour">
 
 ```vapour
-let x: int | char
+let x: int | na
 
-x = "hello"
-x = 2
+x = NA
 ```
 
 </TabItem>
 <TabItem value="r" label="R">
 
 ```r
-x = c("hello")
-x = c(2)
+x = c(NA)
 ```
 
 </TabItem>
@@ -131,9 +130,9 @@ see the `object` type for that effect.
 <TabItem value="vp" label="Vapour">
 
 ```vapour
-type lst: list { int | char }
+type lst: list { int | na }
 
-let counts: lst = lst(1, "hello", 3, 4)
+let counts: lst = lst(1, NA, 3, 4)
 ```
 
 </TabItem>
@@ -141,7 +140,7 @@ let counts: lst = lst(1, "hello", 3, 4)
 
 ```r
 counts = structure(
-  list(1, "hello", 3, 4),
+  list(1, 2, 3, 4),
   class = c("lst", "list")
 )
 ```

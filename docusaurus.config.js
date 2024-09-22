@@ -82,6 +82,13 @@ const config = {
             label: "Docs",
           },
           {to: 'blog', label: 'Blog', position: 'left'},
+          {to: 'changelog', label: 'Changelog', position: 'left'},
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+            dropdownActiveClassDisabled: true,
+          },
           {
             href: "https://github.com/vapourlang/vapour",
             label: "GitHub",
