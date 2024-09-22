@@ -25,6 +25,8 @@ Requirements:
 - Go >= 1.21.0
 - Your `GOPATH` added to your `PATH`
 
+For more information see [Go installation page](https://go.dev/doc/install).
+
 ```bash
 go install github.com/vapourlang/vapour@v0.0.5
 ```
