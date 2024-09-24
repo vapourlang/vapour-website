@@ -76,7 +76,7 @@ for(i in 1:10) {
 
 ## Return
 
-In Vapour `return` is a keywork, not a function.
+In Vapour `return` is a keyword, not a function.
 
 <Tabs>
 <TabItem value="vp" label="Vapour">

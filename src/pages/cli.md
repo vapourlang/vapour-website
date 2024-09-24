@@ -27,7 +27,7 @@ Usage of vapour:
   -outdir dir
     	Directory where to place transpiled files from dir (defaults to R) (default "R")
   -outfile infile
-    	Name of R file to where to palce transpiled infile. (defaults to vapour.R) (default "vapour.R")
+    	Name of R file to where to place transpiled infile. (defaults to vapour.R) (default "vapour.R")
   -port string
     	Port on which to run the language server protocol, only used if -tcp flag is passed (defaults to 3000) (default "3000")
   -repl
@@ -104,7 +104,7 @@ vapour -lsp -tcp -port=3000
 
 ## Devtools
 
-There is a `devtools` argument for convinience, you can pass it
+There is a `devtools` argument for convenience, you can pass it
 a comma separated list of devtools function to run if the transpilation
 is successful.
 

@@ -94,9 +94,9 @@ you call it from.
 
 ```vapour
 # will warn that the package is not installed
-nonExistentPackge::foo()
+nonExistentPackage::foo()
 
-# will warn that the function is not exported by that pacakge
+# will warn that the function is not exported by that package
 dplyr::some_function()
 ```
 
