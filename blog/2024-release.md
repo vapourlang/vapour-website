@@ -11,7 +11,6 @@ authors:
       x: jdatap 
       github: JohnCoene 
 tags: [release]
-image: https://i.imgur.com/mErPwqL.png
 hide_table_of_contents: false
 ---
 

@@ -28,7 +28,7 @@ Requirements:
 For more information see [Go installation page](https://go.dev/doc/install).
 
 ```bash
-go install github.com/vapourlang/vapour@v0.0.5
+go install github.com/vapourlang/vapour@latest
 ```
 
 ## Download

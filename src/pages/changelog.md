@@ -10,6 +10,10 @@ and [#62](https://github.com/vapourlang/vapour/issues/62)
 - Fix, remove wrong accessor check on `[` and `[[`
 - Fix parsing, transpilation of `for` loops
 - Fix check on iteratable objects
+- Fix check symbols exist in assignment
+- Fix check that types exist when used
+
+More on the [release](https://github.com/vapourlang/vapour/releases/tag/v0.0.5)
 
 ## v0.0.5
 

@@ -30,6 +30,7 @@ __Objects:__
 - `object` - named list 
 - `factor` - factor
 - `func` - function
+- `environment` - environment
 
 :::info
 
