@@ -1,0 +1,27 @@
+{
+  "docs": [
+    "introduction",
+    {
+      "type": "category",
+      "label": "Docs",
+      "items": [
+        "syntax",
+        "features",
+        "types",
+        "variables",
+        "functions",
+        "packages",
+        "io"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Examples",
+      "items": [
+        "example-basic",
+        "example-callbacks",
+        "example-s3"
+      ]
+    }
+  ]
+}
