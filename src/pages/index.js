@@ -23,6 +23,7 @@ function HomepageHeader() {
       <div className="container">
         <img src="/img/vapour.png"/>
         <p className={clsx("hero__title", styles.tagline)}>{siteConfig.tagline}</p>
+        <iframe style={{display: "block", margin: "0 auto", marginBottom: "2rem"}} src="https://ghbtns.com/github-btn.html?user=vapourlang&repo=vapour&type=star" frameborder="0" scrolling="0" width="50" height="20" title="GitHub"></iframe>
         <div className={styles.buttons}>
           <Link
             className={clsx("button button--primary button--lg", styles.white)}
